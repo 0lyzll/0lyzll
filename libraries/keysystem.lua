@@ -257,7 +257,11 @@ end
 
 local function addCorner(parent, radius)
 	local corner = Instance.new("UICorner")
-	corner.CornerRadius = radius or UDim.new(0, 5)
+	if type(radius) == "number" then
+		corner.CornerRadius = UDim.new(0, radius)
+	else
+		corner.CornerRadius = radius or UDim.new(0, 5)
+	end
 	corner.Parent = parent
 	return corner
 end
