@@ -4,7 +4,7 @@ local players = game:GetService('Players')
 local localPlayer = players.LocalPlayer or {Name = "Anonymous"}
 
 -- YOUR 24/7 CLOUDFLARE WORKER API (always online, no external dependencies)
-local API_BASE = "https://broken-glitter-fc5d.motionv4.workers.dev"
+local API_BASE = "https://dogvape-configs.YOUR_SUBDOMAIN.workers.dev"
 
 local req = (syn and syn.request) or (http and http.request) or http_request or request or (fluxus and fluxus.request)
 

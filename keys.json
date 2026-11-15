@@ -1,6 +1,0 @@
-{
-  "_readme": "DogVape keys. Value can be a role string (\"user\") or an object ({ \"role\": \"owner\", \"name\": \"you\" }). Keys are matched ignoring case, spaces, dashes and underscores.",
-  "keys": {
-    "DOGVAPE-TEST-KEY": { "role": "tester", "name": "Test Key" }
-  }
-}
