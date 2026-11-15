@@ -7485,7 +7485,6 @@ local textguishadow = textgui:CreateToggle({
 		mainapi:UpdateTextGUI()
 	end
 })
-local textguigradientv4
 local textguigradient = textgui:CreateToggle({
 	Name = 'Gradient',
 	Tooltip = 'Renders a gradient',
@@ -8262,7 +8261,7 @@ function mainapi:UpdateGUI(hue, sat, val, default)
 			ColorSequenceKeypoint.new(0, Color3.fromHSV(hue, sat, val)),
 			ColorSequenceKeypoint.new(1, textguigradient.Enabled and Color3.fromHSV(mainapi:Color((hue - 0.075) % 1)) or Color3.fromHSV(hue, sat, val))
 		})
-		VapeLogoGradient2.Color = textguigradient.Enabled and textguigradientv4.Enabled and VapeLogoGradient.Color or ColorSequence.new({
+		VapeLogoGradient2.Color = textguigradient.Enabled and VapeLogoGradient.Color or ColorSequence.new({
 			ColorSequenceKeypoint.new(0, Color3.new(1, 1, 1)),
 			ColorSequenceKeypoint.new(1, Color3.new(1, 1, 1))
 		})
