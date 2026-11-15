@@ -2608,16 +2608,38 @@ function mainapi:CreateGUI()
 	addCorner(window)
 	makeDraggable(window)
 
-	-- Custom logo on top left (replaces text)
+	-- Centered logo + text container
+	local logoContainer = Instance.new('Frame')
+	logoContainer.Name = 'LogoContainer'
+	logoContainer.Size = UDim2.fromOffset(200, 40)
+	logoContainer.Position = UDim2.new(0.5, -100, 0, 2)
+	logoContainer.BackgroundTransparency = 1
+	logoContainer.Parent = window
+
+	-- Custom logo centered
 	local logoIcon = Instance.new('ImageLabel')
 	logoIcon.Name = 'LogoIcon'
-	logoIcon.Size = UDim2.fromOffset(40, 40)
-	logoIcon.Position = UDim2.fromOffset(12, 6)
+	logoIcon.Size = UDim2.fromOffset(36, 36)
+	logoIcon.Position = UDim2.fromOffset(0, 2)
 	logoIcon.BackgroundTransparency = 1
 	logoIcon.Image = getcustomasset('DogVape/assets/new/dogvape_logo.png')
 	logoIcon.ImageColor3 = Color3.fromHSV(mainapi.GUIColor.Hue, mainapi.GUIColor.Sat, mainapi.GUIColor.Value)
 	logoIcon.ScaleType = Enum.ScaleType.Fit
-	logoIcon.Parent = window
+	logoIcon.Parent = logoContainer
+
+	-- DogVape text next to logo
+	local logoText = Instance.new('TextLabel')
+	logoText.Name = 'LogoText'
+	logoText.Size = UDim2.fromOffset(140, 36)
+	logoText.Position = UDim2.fromOffset(42, 2)
+	logoText.BackgroundTransparency = 1
+	logoText.Text = 'DogVape'
+	logoText.TextColor3 = Color3.fromHSV(mainapi.GUIColor.Hue, mainapi.GUIColor.Sat, mainapi.GUIColor.Value)
+	logoText.TextSize = 22
+	logoText.FontFace = uipallet.FontSemiBold
+	logoText.TextXAlignment = Enum.TextXAlignment.Left
+	logoText.TextYAlignment = Enum.TextYAlignment.Center
+	logoText.Parent = logoContainer
 	local children = Instance.new('Frame')
 	children.Name = 'Children'
 	children.Size = UDim2.new(1, 0, 1, -33)
@@ -8352,13 +8374,20 @@ function mainapi:UpdateGUI(hue, sat, val, default)
 		end
 	end
 
-	-- Update main window logo color
+	-- Update main window logo color (icon + text)
 	if clickgui then
 		local mainWindow = clickgui:FindFirstChild('Window')
 		if mainWindow then
-			local logoIcon = mainWindow:FindFirstChild('LogoIcon')
-			if logoIcon then
-				logoIcon.ImageColor3 = rainbow and Color3.fromHSV(mainapi:Color(hue % 1)) or Color3.fromHSV(hue, sat, val)
+			local logoContainer = mainWindow:FindFirstChild('LogoContainer')
+			if logoContainer then
+				local logoIcon = logoContainer:FindFirstChild('LogoIcon')
+				if logoIcon then
+					logoIcon.ImageColor3 = rainbow and Color3.fromHSV(mainapi:Color(hue % 1)) or Color3.fromHSV(hue, sat, val)
+				end
+				local logoText = logoContainer:FindFirstChild('LogoText')
+				if logoText then
+					logoText.TextColor3 = rainbow and Color3.fromHSV(mainapi:Color(hue % 1)) or Color3.fromHSV(hue, sat, val)
+				end
 			end
 		end
 	end
