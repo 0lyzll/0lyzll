@@ -1,6 +1,3 @@
-# Client-side key validation (keep private to prevent bypass)
-libraries/keysystem.lua
-
 # Local profiles/keys
 DogVape/profiles/
 *.txt
