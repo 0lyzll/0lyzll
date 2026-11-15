@@ -57,16 +57,16 @@ local statusColors = {
 }
 
 -- Asset mapping (matches new.lua)
-local getcustomassets = {
+local assetMap = {
 	['DogVape/assets/new/close.png'] = 'rbxassetid://14368309446',
 	['DogVape/assets/new/blur.png'] = 'rbxassetid://14898786664',
 }
 
-local function getcustomasset(path)
+local function getAsset(path)
 	if isfile and isfile(path) then
-		return getcustomasset(path)
+		return getAsset(path)
 	end
-	return getcustomassets[path] or ''
+	return assetMap[path] or ''
 end
 
 -- == services ==============================================================
@@ -247,7 +247,7 @@ local function addBlur(parent)
 	blur.Size = UDim2.new(1, 89, 1, 52)
 	blur.Position = UDim2.fromOffset(-48, -31)
 	blur.BackgroundTransparency = 1
-	blur.Image = getcustomasset("DogVape/assets/new/blur.png")
+	blur.Image = getAsset("DogVape/assets/new/blur.png")
 	blur.ScaleType = Enum.ScaleType.Slice
 	blur.SliceCenter = Rect.new(52, 31, 261, 502)
 	blur.ZIndex = 0
@@ -270,7 +270,7 @@ local function addCloseButton(parent, offset)
 	close.BackgroundColor3 = Color3.new(1, 1, 1)
 	close.BackgroundTransparency = 1
 	close.AutoButtonColor = false
-	close.Image = getcustomasset("DogVape/assets/new/close.png")
+	close.Image = getAsset("DogVape/assets/new/close.png")
 	close.ImageColor3 = colorLight(uipallet.Text, 0.2)
 	close.ImageTransparency = 0.5
 	close.Parent = parent
