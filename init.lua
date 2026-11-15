@@ -8,7 +8,7 @@ getgenv().AutoReinjectEnabled = true
 
 -- AUTO UPDATE LOGIC
 local function getLatestCommit()
-	if shared._DogVapeChecked then
+	if shared._DogVapeChecked and isfile("DogVape/profiles/commit.txt") then
 		return readfile("DogVape/profiles/commit.txt")
 	end
 	local suc, res = pcall(function()
