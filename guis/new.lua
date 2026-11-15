@@ -83,8 +83,7 @@ local getcustomassets = {
 	['DogVape/assets/new/colorpreview.png'] = 'rbxassetid://14368311578',
 	['DogVape/assets/new/combaticon.png'] = 'rbxassetid://14368312652',
 	['DogVape/assets/new/customsettings.png'] = 'rbxassetid://14403726449',
-	['DogVape/assets/new/discord.png'] = '',
-	['DogVape/assets/new/dots.png'] = 'rbxassetid://14368314459',
+		['DogVape/assets/new/dots.png'] = 'rbxassetid://14368314459',
 	['DogVape/assets/new/edit.png'] = 'rbxassetid://14368315443',
 	['DogVape/assets/new/expandicon.png'] = 'rbxassetid://14368353032',
 	['DogVape/assets/new/expandright.png'] = 'rbxassetid://14368316544',
@@ -93,7 +92,6 @@ local getcustomassets = {
 	['DogVape/assets/new/guisettings.png'] = 'rbxassetid://14368318994',
 	['DogVape/assets/new/guislider.png'] = 'rbxassetid://14368320020',
 	['DogVape/assets/new/guisliderrain.png'] = 'rbxassetid://14368321228',
-	['DogVape/assets/new/guiv4.png'] = 'rbxassetid://138935172340460',
 	['DogVape/assets/new/guivape.png'] = 'rbxassetid://108672093407887',
 	['DogVape/assets/new/info.png'] = 'rbxassetid://14368324807',
 	['DogVape/assets/new/inventoryicon.png'] = 'rbxassetid://14928011633',
@@ -123,7 +121,6 @@ local getcustomassets = {
 	['DogVape/assets/new/targetplayers2.png'] = 'rbxassetid://14497397862',
 	['DogVape/assets/new/targetstab.png'] = 'rbxassetid://14497393895',
 	['DogVape/assets/new/textguiicon.png'] = 'rbxassetid://14368355456',
-	['DogVape/assets/new/textv4.png'] = 'rbxassetid://138935172340460',
 	['DogVape/assets/new/textvape.png'] = 'rbxassetid://108672093407887',
 	['DogVape/assets/new/utilityicon.png'] = 'rbxassetid://14368359107',
 	['DogVape/assets/new/vape.png'] = 'rbxassetid://108672093407887',
@@ -2643,13 +2640,6 @@ function mainapi:CreateGUI()
 	settingsicon.Image = getcustomasset('DogVape/assets/new/guisettings.png')
 	settingsicon.ImageColor3 = color.Light(uipallet.Main, 0.37)
 	settingsicon.Parent = settingsbutton
-	local discordbutton = Instance.new('ImageButton')
-	discordbutton.Size = UDim2.fromOffset(16, 16)
-	discordbutton.Position = UDim2.new(1, -56, 0, 11)
-	discordbutton.BackgroundTransparency = 1
-	discordbutton.Image = getcustomasset('DogVape/assets/new/discord.png')
-	discordbutton.Parent = window
-	addTooltip(discordbutton, 'Join discord')
 	local settingspane = Instance.new('TextButton')
 	settingspane.Size = UDim2.fromScale(1, 1)
 	settingspane.BackgroundColor3 = color.Dark(uipallet.Main, 0.02)
@@ -3685,37 +3675,6 @@ function mainapi:CreateGUI()
 	end)
 	close.MouseButton1Click:Connect(function()
 		settingspane.Visible = false
-	end)
-	discordbutton.MouseButton1Click:Connect(function()
-		task.spawn(function()
-			local body = httpService:JSONEncode({
-				nonce = httpService:GenerateGUID(false),
-				args = {
-					invite = {code = 'FGtCd8xTBy'},
-					code = 'FGtCd8xTBy'
-				},
-				cmd = 'INVITE_BROWSER'
-			})
-
-			for i = 1, 14 do
-				task.spawn(function()
-					request({
-						Method = 'POST',
-						Url = 'http://127.0.0.1:64'..(53 + i)..'/rpc?v=1',
-						Headers = {
-							['Content-Type'] = 'application/json',
-							Origin = 'https://discord.com'
-						},
-						Body = body
-					})
-				end)
-			end
-		end)
-
-		task.spawn(function()
-			tooltip.Text = 'Copied!'
-			setclipboard('https://discord.gg/FGtCd8xTBy')
-		end)
 	end)
 	settingsbutton.MouseEnter:Connect(function()
 		settingsicon.ImageColor3 = uipallet.Text
@@ -7364,7 +7323,7 @@ guipane:CreateDropdown({
 			end
 		end
 	end,
-	Tooltip = 'new - The newest vape theme to since v4.05\nold - The vape theme pre v4.05\nrise - Rise 6.0'
+	Tooltip = 'new - The newest DogVape theme\nold - The legacy DogVape theme\nrise - Rise 6.0 style'
 })
 mainapi.RainbowMode = guipane:CreateDropdown({
 	Name = 'Rainbow Mode',
