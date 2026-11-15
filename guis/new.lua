@@ -2623,7 +2623,7 @@ function mainapi:CreateGUI()
 	logoIcon.Position = UDim2.fromOffset(0, 2)
 	logoIcon.BackgroundTransparency = 1
 	logoIcon.Image = getcustomasset('DogVape/assets/new/dogvape_logo.png')
-	logoIcon.ImageColor3 = Color3.fromHSV(mainapi.GUIColor.Hue, mainapi.GUIColor.Sat, mainapi.GUIColor.Value)
+	logoIcon.ImageColor3 = Color3.new(1, 1, 1)
 	logoIcon.ScaleType = Enum.ScaleType.Fit
 	logoIcon.Parent = logoContainer
 
@@ -2634,7 +2634,7 @@ function mainapi:CreateGUI()
 	logoText.Position = UDim2.fromOffset(42, 2)
 	logoText.BackgroundTransparency = 1
 	logoText.Text = 'DogVape'
-	logoText.TextColor3 = Color3.fromHSV(mainapi.GUIColor.Hue, mainapi.GUIColor.Sat, mainapi.GUIColor.Value)
+	logoText.TextColor3 = Color3.new(1, 1, 1)
 	logoText.TextSize = 22
 	logoText.FontFace = uipallet.FontSemiBold
 	logoText.TextXAlignment = Enum.TextXAlignment.Left
@@ -8374,24 +8374,7 @@ function mainapi:UpdateGUI(hue, sat, val, default)
 		end
 	end
 
-	-- Update main window logo color (icon + text)
-	if clickgui then
-		local mainWindow = clickgui:FindFirstChild('Window')
-		if mainWindow then
-			local logoContainer = mainWindow:FindFirstChild('LogoContainer')
-			if logoContainer then
-				local logoIcon = logoContainer:FindFirstChild('LogoIcon')
-				if logoIcon then
-					logoIcon.ImageColor3 = rainbow and Color3.fromHSV(mainapi:Color(hue % 1)) or Color3.fromHSV(hue, sat, val)
-				end
-				local logoText = logoContainer:FindFirstChild('LogoText')
-				if logoText then
-					logoText.TextColor3 = rainbow and Color3.fromHSV(mainapi:Color(hue % 1)) or Color3.fromHSV(hue, sat, val)
-				end
-			end
-		end
-	end
-
+	
 	for _, button in mainapi.Modules do
 		if button.Enabled then
 			button.Object.BackgroundColor3 = rainbow and Color3.fromHSV(mainapi:Color((hue - (button.Index * 0.025)) % 1)) or Color3.fromHSV(hue, sat, val)
