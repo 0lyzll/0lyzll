@@ -1,7 +1,11 @@
 # Local profiles/keys
 DogVape/profiles/
 *.txt
+keys.json
 
 # Wrangler local dev
 .keys/
 wrangler.toml.local
+
+# Key system (removed)
+keys/
