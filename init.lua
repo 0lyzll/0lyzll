@@ -85,10 +85,17 @@ end
 local playersService = cloneref(game:GetService('Players'))
 local httpService = cloneref(game:GetService("HttpService"))
 
+local function getCommit()
+	if isfile("DogVape/profiles/commit.txt") then
+		return readfile("DogVape/profiles/commit.txt")
+	end
+	return "main"
+end
+
 local function downloadFile(path, func)
 	if not isfile(path) then
 		local suc, res = pcall(function()
-			return game:HttpGet('https://raw.githubusercontent.com/0lyzll/DogVape/'..readfile('DogVape/profiles/commit.txt')..'/'..select(1, path:gsub('DogVape/', '')), true)
+			return game:HttpGet('https://raw.githubusercontent.com/0lyzll/DogVape/'..getCommit()..'/'..select(1, path:gsub('DogVape/', '')), true)
 		end)
 		if not suc or res == '404: Not Found' then
 			error(res)
@@ -180,7 +187,7 @@ local function finishLoading()
 			vape:CreateNotification('DogVape', (getgenv()._DogVapename and `Authenticated as {getgenv()._DogVapename} with {getgenv()._DogVaperole}, ` or '').. (vape.VapeButton and 'Press the button in the top right' or 'Press '..table.concat(vape.Keybind, ' + '):upper())..' to open GUI', 5)
 			task.delay(0.05 + cloneref(game:GetService('RunService')).PostSimulation:Wait(), function()
 				if shared.updated then
-					vape:CreateNotification('DogVape', `Script has updated from {shared.updated} to {readfile('DogVape/profiles/commit.txt'):sub(1, 7)}`, 10, 'info')
+					vape:CreateNotification('DogVape', `Script has updated from {shared.updated} to {getCommit():sub(1, 7)}`, 10, 'info')
 				end
 			end)
 		end
@@ -225,7 +232,7 @@ if not shared.VapeIndependent then
 	else
 		if not shared.VapeDeveloper then
 			local suc, res = pcall(function()
-				return game:HttpGet('https://raw.githubusercontent.com/0lyzll/DogVape/'..readfile('DogVape/profiles/commit.txt')..'/games/'..scriptId..'.lua', true)
+				return game:HttpGet('https://raw.githubusercontent.com/0lyzll/DogVape/'..getCommit()..'/games/'..scriptId..'.lua', true)
 			end)
 			if suc and res ~= '404: Not Found' then
 				loadstring(downloadFile('DogVape/games/'..scriptId..'.lua'), scriptId)(license)
