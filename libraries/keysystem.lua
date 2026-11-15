@@ -48,11 +48,12 @@ local function colorLight(col, num)
 	return Color3.fromHSV(h, s, math.clamp(select(3, uipallet.Main:ToHSV()) > 0.5 and v - num or v + num, 0, 1))
 end
 
+local mainH, mainS, mainV = uipallet.Main:ToHSV()
 local statusColors = {
 	error = Color3.fromRGB(255, 93, 108),
 	ok = Color3.fromRGB(57, 217, 138),
 	dim = Color3.fromRGB(150, 157, 170),
-	accent = Color3.fromHSV((uipallet.Main:ToHSV()))
+	accent = Color3.fromHSV(mainH, mainS, mainV)
 }
 
 -- Asset mapping (matches new.lua)
