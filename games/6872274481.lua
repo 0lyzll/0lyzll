@@ -3467,60 +3467,59 @@ run(function()
 		Name = 'KnockbackChanger',
 		Function = function(callback)
 			if callback then
-					if hooked then return end
-					local util = findKnockbackUtil()
-					if not util then
-						notif('KnockbackDisplace', 'Failed to hook knockback!', 3)
-						KnockbackDisplace:Toggle()
-						return
-					end
-					originalApplyKnockback = util.applyKnockback
-					local capturedOriginal = originalApplyKnockback
-					local hookFn = function(root, mass, dir, knockback, ...)
-						if not capturedOriginal then return end
-						if not KnockbackDisplace.Enabled then
-							return capturedOriginal(root, mass, dir, knockback, ...)
-						end
-
-						local percent = KBPercent.Value / 100
-						local direction = KBDirection.Value
-
-						local modifiedKB = knockback and table.clone(knockback) or {}
-						modifiedKB.horizontal = (modifiedKB.horizontal or 1) * percent
-						modifiedKB.vertical = (modifiedKB.vertical or 1) * percent
-
-						if direction == 'Default' then
-							return capturedOriginal(root, mass, dir, modifiedKB, ...)
-						elseif direction == 'Void' then
-							root:ApplyImpulse(Vector3.new(0, -mass * 60 * percent, 0))
-							return
-						elseif direction == 'Up' then
-							root:ApplyImpulse(Vector3.new(0, mass * 120 * percent, 0))
-							return
-						else
-							local hrpPos = root.Position
-							local cf = root.CFrame
-							local newDir = dir
-							if direction == 'Left' then
-								newDir = -cf.RightVector
-							elseif direction == 'Right' then
-								newDir = cf.RightVector
-							elseif direction == 'Reverse' then
-								newDir = -dir
-							end
-							return capturedOriginal(root, mass, newDir, modifiedKB, ...)
-						end
-					end
-					util.applyKnockback = hookFn
-					hookedUtil = util
-					installedHook = hookFn
-					hooked = true
-				else
-					unhookKnockback()
+				if hooked then return end
+				local util = findKnockbackUtil()
+				if not util then
+					notif('KnockbackDisplace', 'Failed to hook knockback!', 3)
+					KnockbackDisplace:Toggle()
+					return
 				end
-			end,
-			Tooltip = 'changes your knockback direction and percentage'
-		})
+				originalApplyKnockback = util.applyKnockback
+				local capturedOriginal = originalApplyKnockback
+				local hookFn = function(hrp, mass, sourcePos, modifier)
+					if not capturedOriginal then return end
+					if not KnockbackDisplace.Enabled then
+						return capturedOriginal(hrp, mass, sourcePos, modifier)
+					end
+					
+					local percent = KBPercent.Value / 100
+					local dir = KBDirection.Value
+					
+					if dir == 'Default' then
+						-- Scale the mass to reduce knockback
+						return capturedOriginal(hrp, mass * percent, sourcePos, modifier)
+					elseif dir == 'Void' then
+						hrp:ApplyImpulse(Vector3.new(0, -mass * 60 * percent, 0))
+						return
+					elseif dir == 'Up' then
+						hrp:ApplyImpulse(Vector3.new(0, mass * 120 * percent, 0))
+						return
+					else
+						local hrpPos = hrp.Position
+						local cf = hrp.CFrame
+						local fakeSource
+						if dir == 'Left' then
+							fakeSource = hrpPos + cf.RightVector * 10
+						elseif dir == 'Right' then
+							fakeSource = hrpPos - cf.RightVector * 10
+						elseif dir == 'Reverse' then
+							if sourcePos then
+								fakeSource = Vector3.new(2 * hrpPos.X - sourcePos.X, sourcePos.Y, 2 * hrpPos.Z - sourcePos.Z)
+							end
+						end
+						-- Scale the mass when calling original
+						return capturedOriginal(hrp, mass * percent, fakeSource or sourcePos, modifier)
+					end
+				end
+				util.applyKnockback = hookFn
+				hookedUtil = util
+				installedHook = hookFn
+				hooked = true
+			else
+				unhookKnockback()
+			end
+		end,
+		Tooltip = 'changes your knockback direction and percentage'
 	})
 
 	vape:Clean(unhookKnockback)
