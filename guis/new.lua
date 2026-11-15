@@ -2606,15 +2606,30 @@ function mainapi:CreateGUI()
 	addBlur(window)
 	addCorner(window)
 	makeDraggable(window)
-	local logo = Instance.new('ImageLabel')
-	logo.Name = 'VapeLogo'
-	logo.Size = UDim2.fromOffset(155, 40)
-	logo.Position = UDim2.new(0.5, -77, 0, 2)
-	logo.BackgroundTransparency = 1
-	logo.Image = getcustomasset('DogVape/assets/new/guivape.png')
-	logo.ImageColor3 = Color3.fromHSV(mainapi.GUIColor.Hue, mainapi.GUIColor.Sat, mainapi.GUIColor.Value)
-	logo.ScaleType = Enum.ScaleType.Fit
-	logo.Parent = window
+
+	-- Small logo icon on top left
+	local logoIcon = Instance.new('ImageLabel')
+	logoIcon.Name = 'LogoIcon'
+	logoIcon.Size = UDim2.fromOffset(28, 28)
+	logoIcon.Position = UDim2.fromOffset(12, 6)
+	logoIcon.BackgroundTransparency = 1
+	logoIcon.Image = getcustomasset('DogVape/assets/new/vape.png')
+	logoIcon.ImageColor3 = Color3.fromHSV(mainapi.GUIColor.Hue, mainapi.GUIColor.Sat, mainapi.GUIColor.Value)
+	logoIcon.ScaleType = Enum.ScaleType.Fit
+	logoIcon.Parent = window
+
+	-- DogVape text next to icon
+	local logoText = Instance.new('TextLabel')
+	logoText.Name = 'LogoText'
+	logoText.Size = UDim2.fromOffset(120, 30)
+	logoText.Position = UDim2.fromOffset(46, 5)
+	logoText.BackgroundTransparency = 1
+	logoText.Text = 'DogVape'
+	logoText.TextColor3 = Color3.fromHSV(mainapi.GUIColor.Hue, mainapi.GUIColor.Sat, mainapi.GUIColor.Value)
+	logoText.TextSize = 20
+	logoText.FontFace = uipallet.FontSemiBold
+	logoText.TextXAlignment = Enum.TextXAlignment.Left
+	logoText.Parent = window
 	local children = Instance.new('Frame')
 	children.Name = 'Children'
 	children.Size = UDim2.new(1, 0, 1, -33)
@@ -8349,13 +8364,17 @@ function mainapi:UpdateGUI(hue, sat, val, default)
 		end
 	end
 
-	-- Update main window logo color
+	-- Update main window logo color (icon + text)
 	if clickgui then
 		local mainWindow = clickgui:FindFirstChild('Window')
 		if mainWindow then
-			local mainLogo = mainWindow:FindFirstChild('VapeLogo')
-			if mainLogo then
-				mainLogo.ImageColor3 = rainbow and Color3.fromHSV(mainapi:Color(hue % 1)) or Color3.fromHSV(hue, sat, val)
+			local logoIcon = mainWindow:FindFirstChild('LogoIcon')
+			if logoIcon then
+				logoIcon.ImageColor3 = rainbow and Color3.fromHSV(mainapi:Color(hue % 1)) or Color3.fromHSV(hue, sat, val)
+			end
+			local logoText = mainWindow:FindFirstChild('LogoText')
+			if logoText then
+				logoText.TextColor3 = rainbow and Color3.fromHSV(mainapi:Color(hue % 1)) or Color3.fromHSV(hue, sat, val)
 			end
 		end
 	end
