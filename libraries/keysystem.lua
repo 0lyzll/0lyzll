@@ -368,7 +368,7 @@ local function showPrompt(onDone)
 	local dot = Instance.new("Frame")
 	dot.Size = UDim2.fromOffset(9, 9)
 	dot.Position = UDim2.fromOffset(20, 22)
-	dot.BackgroundColor3 = Color3.fromHSV((uipallet.Main:ToHSV()))
+	dot.BackgroundColor3 = Color3.fromHSV(mainH, mainS, mainV)
 	dot.BorderSizePixel = 0
 	dot.Parent = header
 	addCorner(dot, 5)
@@ -480,7 +480,7 @@ local function showPrompt(onDone)
 		getKeyBkg.Parent = getKey
 		addCorner(getKeyBkg, 4)
 		local getKeyStroke = Instance.new("UIStroke")
-		getKeyStroke.Color = Color3.fromHSV((uipallet.Main:ToHSV()))
+		getKeyStroke.Color = Color3.fromHSV(mainH, mainS, mainV)
 		getKeyStroke.Thickness = 1
 		getKeyStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 		getKeyStroke.Parent = getKeyBkg
@@ -492,7 +492,7 @@ local function showPrompt(onDone)
 		getKeyLabel.Text = "Get a key"
 		getKeyLabel.FontFace = uipallet.FontSemiBold
 		getKeyLabel.TextSize = 13
-		getKeyLabel.TextColor3 = Color3.fromHSV((uipallet.Main:ToHSV()))
+		getKeyLabel.TextColor3 = Color3.fromHSV(mainH, mainS, mainV)
 		getKeyLabel.Parent = getKeyBkg
 		addCorner(getKeyLabel, UDim.new(0, 4))
 
@@ -592,7 +592,7 @@ local function showPrompt(onDone)
 	if getKey then
 		track(getKey.MouseEnter:Connect(function()
 			tween(getKeyBkg, { BackgroundTransparency = 0.2 })
-			tween(getKeyStroke, { Color = Color3.fromHSV((uipallet.Main:ToHSV())) })
+			tween(getKeyStroke, { Color = Color3.fromHSV(mainH, mainS, mainV) })
 		end))
 		track(getKey.MouseLeave:Connect(function()
 			tween(getKeyBkg, { BackgroundTransparency = 1 })
