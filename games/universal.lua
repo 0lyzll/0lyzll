@@ -2084,7 +2084,7 @@ run(function()
 				Platform.Parent = Fly.Enabled and gameCamera or nil
 			end
 		end,
-		Tooltip = 'Velocity - Uses smooth physics based movement\nImpulse - Same as velocity while using forces instead\nCFrame - Directly adjusts the position of the root\nTP - Teleports you to the ground within intervals\nFloor - Spawns a part under you\nJump - Presses space after going below a certain Y Level\nBounce - Vertical bouncing motion'
+		Tooltip = 'Velocity - Uses smooth physics based movement\nImpulse - Same as velocity while using forces instead\nCFrame - Directly adjusts the position of the root\nTP - Teleports you to the ground within intervals\nFloor - Spawns a part under you\nJump - Presses space after going below a certain Y Level\nBounce - Vertical bouncing DogVape'
 	})
 	local states = {'None'}
 	for _, v in Enum.HumanoidStateType:GetEnumItems() do

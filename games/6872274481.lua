@@ -3349,7 +3349,7 @@ run(function()
         Default = 6,
     })
     VelocityBoost = AimAssist:CreateToggle({
-        Name = 'Motion aware',
+        Name = 'DogVape aware',
         Default = false,
         Tooltip = 'Faster aim when target moves fast, slower when target moves slow',
     })
