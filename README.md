@@ -1,10 +1,10 @@
-# 0lyzll
-0lyzll SCRIPT
+# DogVape
+DogVape SCRIPT
 
 ## Execution
 
 ```lua
-script_key = "KEY-HERE"; loadstring(game:HttpGet('https://raw.githubusercontent.com/0lyzll/0lyzll/main/init.lua'), 'init.lua')({})
+script_key = "KEY-HERE"; loadstring(game:HttpGet('https://raw.githubusercontent.com/0lyzll/DogVape/main/init.lua'), 'init.lua')({})
 ```
 
-Made by 0lyzll.
+Made by DogVape.

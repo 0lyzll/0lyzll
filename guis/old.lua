@@ -59,25 +59,25 @@ local uipallet = {
 }
 
 local getcustomassets = {
-	['0lyzll/assets/old/barlogo.png'] = 'rbxasset://barlogo.png',
-	['0lyzll/assets/old/blatanticon.png'] = 'rbxasset://blatanticon.png',
-	['0lyzll/assets/old/checkbox.png'] = 'rbxasset://checkbox.png',
-	['0lyzll/assets/old/combaticon.png'] = 'rbxasset://combaticon.png',
-	['0lyzll/assets/old/friendsicon.png'] = 'rbxasset://friendsicon.png',
-	['0lyzll/assets/old/guiicon.png'] = 'rbxasset://guiicon.png',
-	['0lyzll/assets/old/info.png'] = 'rbxasset://info.png',
-	['0lyzll/assets/old/pin.png'] = 'rbxasset://pin.png',
-	['0lyzll/assets/old/profilesicon.png'] = 'rbxasset://profilesicon.png',
-	['0lyzll/assets/old/rendericon.png'] = 'rbxasset://rendericon.png',
-	['0lyzll/assets/old/search.png'] = 'rbxasset://search.png',
-	['0lyzll/assets/old/settingsicon.png'] = 'rbxasset://settingsicon.png',
-	['0lyzll/assets/old/targetinfoicon.png'] = 'rbxasset://targetinfoicon.png',
-	['0lyzll/assets/old/textguiicon.png'] = 'rbxasset://textguiicon.png',
-	['0lyzll/assets/old/textv4.png'] = 'rbxasset://textv4.png',
-	['0lyzll/assets/old/textvape.png'] = 'rbxasset://textvape.png',
-	['0lyzll/assets/old/utilityicon.png'] = 'rbxasset://utilityicon.png',
-	['0lyzll/assets/old/vape.png'] = 'rbxassetid://108672093407887',
-	['0lyzll/assets/old/worldicon.png'] = 'rbxasset://worldicon.png'
+	['DogVape/assets/old/barlogo.png'] = 'rbxasset://barlogo.png',
+	['DogVape/assets/old/blatanticon.png'] = 'rbxasset://blatanticon.png',
+	['DogVape/assets/old/checkbox.png'] = 'rbxasset://checkbox.png',
+	['DogVape/assets/old/combaticon.png'] = 'rbxasset://combaticon.png',
+	['DogVape/assets/old/friendsicon.png'] = 'rbxasset://friendsicon.png',
+	['DogVape/assets/old/guiicon.png'] = 'rbxasset://guiicon.png',
+	['DogVape/assets/old/info.png'] = 'rbxasset://info.png',
+	['DogVape/assets/old/pin.png'] = 'rbxasset://pin.png',
+	['DogVape/assets/old/profilesicon.png'] = 'rbxasset://profilesicon.png',
+	['DogVape/assets/old/rendericon.png'] = 'rbxasset://rendericon.png',
+	['DogVape/assets/old/search.png'] = 'rbxasset://search.png',
+	['DogVape/assets/old/settingsicon.png'] = 'rbxasset://settingsicon.png',
+	['DogVape/assets/old/targetinfoicon.png'] = 'rbxasset://targetinfoicon.png',
+	['DogVape/assets/old/textguiicon.png'] = 'rbxasset://textguiicon.png',
+	['DogVape/assets/old/textv4.png'] = 'rbxasset://textv4.png',
+	['DogVape/assets/old/textvape.png'] = 'rbxasset://textvape.png',
+	['DogVape/assets/old/utilityicon.png'] = 'rbxasset://utilityicon.png',
+	['DogVape/assets/old/vape.png'] = 'rbxassetid://108672093407887',
+	['DogVape/assets/old/worldicon.png'] = 'rbxasset://worldicon.png'
 }
 
 local isfile = isfile or function(file)
@@ -221,7 +221,7 @@ local function downloadFile(path, func)
 	if not isfile(path) then
 		createDownloader(path)
 		local suc, res = pcall(function()
-			return game:HttpGet('https://raw.githubusercontent.com/0lyzll/0lyzll/'..readfile('0lyzll/profiles/commit.txt')..'/'..select(1, path:gsub('0lyzll/', '')), true)
+			return game:HttpGet('https://raw.githubusercontent.com/0lyzll/DogVape/'..readfile('DogVape/profiles/commit.txt')..'/'..select(1, path:gsub('DogVape/', '')), true)
 		end)
 		if not suc or res == '404: Not Found' then
 			error(res)
@@ -310,7 +310,7 @@ local function removeTags(str)
 end
 
 do
-	local res = isfile('0lyzll/profiles/color.txt') and loadJson('0lyzll/profiles/color.txt')
+	local res = isfile('DogVape/profiles/color.txt') and loadJson('DogVape/profiles/color.txt')
 	if res then
 		uipallet.Main = res.Main and Color3.fromRGB(unpack(res.Main)) or uipallet.Main
 		uipallet.Text = res.Text and Color3.fromRGB(unpack(res.Text)) or uipallet.Text
@@ -577,7 +577,7 @@ components = {
 		expand.Size = UDim2.fromOffset(9, 5)
 		expand.Position = UDim2.fromOffset(4, 4)
 		expand.BackgroundTransparency = 1
-		expand.Image = getcustomasset('0lyzll/assets/new/expandicon.png')
+		expand.Image = getcustomasset('DogVape/assets/new/expandicon.png')
 		expand.ImageColor3 = color.Dark(uipallet.Text, 0.43)
 		expand.Parent = expandbutton
 		local rainbow = Instance.new('TextButton')
@@ -1344,7 +1344,7 @@ components = {
 				local objectdotin = Instance.new('ImageLabel')
 				objectdotin.Size = UDim2.fromScale(1, 1)
 				objectdotin.BackgroundTransparency = 1
-				objectdotin.Image = getcustomasset('0lyzll/assets/old/checkbox.png')
+				objectdotin.Image = getcustomasset('DogVape/assets/old/checkbox.png')
 				objectdotin.ImageColor3 = uipallet.Text
 				objectdotin.Parent = objectdot
 				local objecttitle = Instance.new('TextLabel')
@@ -1593,7 +1593,7 @@ components = {
 		arrow.Size = UDim2.fromOffset(12, 6)
 		arrow.Position = UDim2.new(1, -56, 0, 10)
 		arrow.BackgroundTransparency = 1
-		arrow.Image = getcustomasset('0lyzll/assets/new/rangearrow.png')
+		arrow.Image = getcustomasset('DogVape/assets/new/rangearrow.png')
 		arrow.ImageColor3 = color.Light(uipallet.Main, 0.14)
 		arrow.Parent = slider
 		optionsettings.Function = optionsettings.Function or function() end
@@ -1784,7 +1784,7 @@ function mainapi:CreateBar()
 	logo.Size = UDim2.fromOffset(92, 25)
 	logo.Position = UDim2.fromOffset(11, 8)
 	logo.BackgroundTransparency = 1
-	logo.Image = getcustomasset('0lyzll/assets/old/barlogo.png')
+	logo.Image = getcustomasset('DogVape/assets/old/barlogo.png')
 	logo.ImageColor3 = uipallet.Text
 	logo.Parent = bar
 	local settingsbutton = Instance.new('TextButton')
@@ -1800,7 +1800,7 @@ function mainapi:CreateBar()
 	settingsicon.Size = UDim2.fromOffset(26, 26)
 	settingsicon.Position = UDim2.fromOffset(4, 4)
 	settingsicon.BackgroundTransparency = 1
-	settingsicon.Image = getcustomasset('0lyzll/assets/old/settingsicon.png')
+	settingsicon.Image = getcustomasset('DogVape/assets/old/settingsicon.png')
 	settingsicon.ImageColor3 = uipallet.Text
 	settingsicon.Parent = settingsbutton
 	local children = Instance.new('Frame')
@@ -1817,7 +1817,7 @@ function mainapi:CreateBar()
 	local searchbutton = settingsbutton:Clone()
 	searchbutton.Position = UDim2.fromOffset(144, 4)
 	searchbutton.Parent = bar
-	searchbutton.ImageLabel.Image = getcustomasset('0lyzll/assets/old/search.png')
+	searchbutton.ImageLabel.Image = getcustomasset('DogVape/assets/old/search.png')
 
 	function categoryapi:CreateBind()
 		local optionapi = {}
@@ -2557,7 +2557,7 @@ function mainapi:CreateOverlay(categorysettings)
 	pin.Position = UDim2.new(1, -23, 0, 11)
 	pin.BackgroundTransparency = 1
 	pin.AutoButtonColor = false
-	pin.Image = getcustomasset('0lyzll/assets/old/pin.png')
+	pin.Image = getcustomasset('DogVape/assets/old/pin.png')
 	pin.ImageColor3 = color.Dark(uipallet.Text, 0.43)
 	pin.Parent = window
 	local customchildren = Instance.new('Frame')
@@ -2749,8 +2749,8 @@ function mainapi:CreateCategoryList(categorysettings)
 				if ind then
 					if val ~= 'default' then
 						table.remove(mainapi.Profiles, ind)
-						if isfile('0lyzll/profiles/'..val..mainapi.Place..'.txt') and delfile then
-							delfile('0lyzll/profiles/'..val..mainapi.Place..'.txt')
+						if isfile('DogVape/profiles/'..val..mainapi.Place..'.txt') and delfile then
+							delfile('DogVape/profiles/'..val..mainapi.Place..'.txt')
 						end
 					end
 				else
@@ -2876,7 +2876,7 @@ function mainapi:CreateCategoryList(categorysettings)
 				local objectdotin = Instance.new('ImageLabel')
 				objectdotin.Size = UDim2.fromScale(1, 1)
 				objectdotin.BackgroundTransparency = 1
-				objectdotin.Image = getcustomasset('0lyzll/assets/old/checkbox.png')
+				objectdotin.Image = getcustomasset('DogVape/assets/old/checkbox.png')
 				objectdotin.ImageColor3 = uipallet.Text
 				objectdotin.Parent = objectdot
 				local objecttitle = Instance.new('TextLabel')
@@ -3015,7 +3015,7 @@ function mainapi:CreateNotification(title, text, duration, type)
 		iconshadow.Position = UDim2.fromOffset(1, 3)
 		iconshadow.ZIndex = 5
 		iconshadow.BackgroundTransparency = 1
-		iconshadow.Image = getcustomasset('0lyzll/assets/old/info.png')
+		iconshadow.Image = getcustomasset('DogVape/assets/old/info.png')
 		iconshadow.ImageColor3 = Color3.new()
 		iconshadow.ImageTransparency = 0.5
 		iconshadow.Parent = notification
@@ -3090,8 +3090,8 @@ function mainapi:Load(skipgui, profile)
 	local guidata = {}
 	local savecheck = true
 
-	if isfile('0lyzll/profiles/'..game.GameId..'.gui.txt') then
-		guidata = loadJson('0lyzll/profiles/'..game.GameId..'.gui.txt')
+	if isfile('DogVape/profiles/'..game.GameId..'.gui.txt') then
+		guidata = loadJson('DogVape/profiles/'..game.GameId..'.gui.txt')
 		if not guidata then
 			guidata = {Categories = {}}
 			self:CreateNotification('Vape', 'Failed to load GUI settings.', 10, 'alert')
@@ -3134,8 +3134,8 @@ function mainapi:Load(skipgui, profile)
 	}}
 	self.Categories.Profiles:ChangeValue()
 
-	if isfile('0lyzll/profiles/'..self.Profile..self.Place..'.txt') then
-		local savedata = loadJson('0lyzll/profiles/'..self.Profile..self.Place..'.txt')
+	if isfile('DogVape/profiles/'..self.Profile..self.Place..'.txt') then
+		local savedata = loadJson('DogVape/profiles/'..self.Profile..self.Place..'.txt')
 		if not savedata then
 			savedata = {
 				Categories = {},
@@ -3221,7 +3221,7 @@ function mainapi:Load(skipgui, profile)
 		image.Size = UDim2.fromOffset(26, 26)
 		image.Position = UDim2.fromOffset(3, 3)
 		image.BackgroundTransparency = 1
-		image.Image = getcustomasset('0lyzll/assets/old/vape.png')
+		image.Image = getcustomasset('DogVape/assets/old/vape.png')
 		image.Parent = button
 		self.VapeButton = button
 		button.MouseButton1Click:Connect(function()
@@ -3314,8 +3314,8 @@ function mainapi:Save(newprofile)
 		}
 	end
 
-	writefile('0lyzll/profiles/'..game.GameId..'.gui.txt', httpService:JSONEncode(guidata))
-	writefile('0lyzll/profiles/'..self.Profile..self.Place..'.txt', httpService:JSONEncode(savedata))
+	writefile('DogVape/profiles/'..game.GameId..'.gui.txt', httpService:JSONEncode(guidata))
+	writefile('DogVape/profiles/'..self.Profile..self.Place..'.txt', httpService:JSONEncode(savedata))
 end
 
 function mainapi:SaveOptions(object, savedoptions)
@@ -3465,49 +3465,49 @@ end))
 
 mainapi:CreateCategory({
 	Name = 'GUI',
-	Icon = getcustomasset('0lyzll/assets/old/guiicon.png')
+	Icon = getcustomasset('DogVape/assets/old/guiicon.png')
 })
 local combat = mainapi:CreateCategory({
 	Name = 'Combat',
-	Icon = getcustomasset('0lyzll/assets/old/combaticon.png')
+	Icon = getcustomasset('DogVape/assets/old/combaticon.png')
 })
 mainapi:CreateCategory({
 	Name = 'Blatant',
-	Icon = getcustomasset('0lyzll/assets/old/blatanticon.png'),
+	Icon = getcustomasset('DogVape/assets/old/blatanticon.png'),
 	WindowSize = 164
 })
 mainapi:CreateCategory({
 	Name = 'Render',
-	Icon = getcustomasset('0lyzll/assets/old/rendericon.png'),
+	Icon = getcustomasset('DogVape/assets/old/rendericon.png'),
 	WindowSize = 196
 })
 mainapi:CreateCategory({
 	Name = 'Utility',
-	Icon = getcustomasset('0lyzll/assets/old/utilityicon.png'),
+	Icon = getcustomasset('DogVape/assets/old/utilityicon.png'),
 	WindowSize = 164
 })
 mainapi:CreateCategory({
 	Name = 'World',
-	Icon = getcustomasset('0lyzll/assets/old/worldicon.png')
+	Icon = getcustomasset('DogVape/assets/old/worldicon.png')
 })
 mainapi:CreateCategory({
 	Name = 'Inventory',
-	Icon = getcustomasset('0lyzll/assets/old/worldicon.png')
+	Icon = getcustomasset('DogVape/assets/old/worldicon.png')
 })
 mainapi:CreateCategory({
 	Name = 'Minigames',
-	Icon = getcustomasset('0lyzll/assets/old/worldicon.png')
+	Icon = getcustomasset('DogVape/assets/old/worldicon.png')
 })
 mainapi:CreateCategory({
 	Name = 'Kits',
-	Icon = getcustomasset('0lyzll/assets/old/worldicon.png')
+	Icon = getcustomasset('DogVape/assets/old/worldicon.png')
 })
 mainapi.Legit = mainapi:CreateLegit({
 	Name = 'Legit'
 })
 local settingspane = mainapi:CreateCategory({
 	Name = 'Settings',
-	Icon = getcustomasset('0lyzll/assets/old/settingsicon.png'),
+	Icon = getcustomasset('DogVape/assets/old/settingsicon.png'),
 	WindowSize = 166
 })
 
@@ -3523,7 +3523,7 @@ local friendscolor = {
 }
 local friendssettings = {
 	Name = 'Friends',
-	Icon = getcustomasset('0lyzll/assets/old/friendsicon.png'),
+	Icon = getcustomasset('DogVape/assets/old/friendsicon.png'),
 	Placeholder = 'Roblox username',
 	WindowSize = 250,
 	Function = function()
@@ -3568,7 +3568,7 @@ mainapi:Clean(friends.ColorUpdate)
 ]]
 mainapi:CreateCategoryList({
 	Name = 'Profiles',
-	Icon = getcustomasset('0lyzll/assets/old/profilesicon.png'),
+	Icon = getcustomasset('DogVape/assets/old/profilesicon.png'),
 	Placeholder = 'Type name',
 	WindowSize = 250,
 	Profiles = true
@@ -3580,7 +3580,7 @@ mainapi:CreateCategoryList({
 local targets
 targets = mainapi:CreateCategoryList({
 	Name = 'Targets',
-	Icon = getcustomasset('0lyzll/assets/old/friendsicon.png'),
+	Icon = getcustomasset('DogVape/assets/old/friendsicon.png'),
 	Placeholder = 'Roblox username',
 	WindowSize = 250,
 	Function = function()
@@ -3729,12 +3729,12 @@ topbar:CreateDropdown({
 	List = inputService.TouchEnabled and {'new', 'old'} or {'new', 'old', 'rise'},
 	Function = function(val, mouse)
 		if mouse then
-			writefile('0lyzll/profiles/gui.txt', val)
+			writefile('DogVape/profiles/gui.txt', val)
 			shared.vapereload = true
 			if shared.VapeDeveloper then
-				loadstring(readfile('0lyzll/init.lua'), 'init')()
+				loadstring(readfile('DogVape/init.lua'), 'init')()
 			else
-				loadstring(game:HttpGet('https://raw.githubusercontent.com/0lyzll/0lyzll/'..readfile('0lyzll/profiles/commit.txt')..'/init.lua', true))()
+				loadstring(game:HttpGet('https://raw.githubusercontent.com/0lyzll/DogVape/'..readfile('DogVape/profiles/commit.txt')..'/init.lua', true))()
 			end
 		end
 	end,
@@ -3765,14 +3765,14 @@ topbar:CreateButton({
 	Name = 'Reset current profile',
 	Function = function()
 	mainapi.Save = function() end
-		if isfile('0lyzll/profiles/'..mainapi.Profile..mainapi.Place..'.txt') and delfile then
-			delfile('0lyzll/profiles/'..mainapi.Profile..mainapi.Place..'.txt')
+		if isfile('DogVape/profiles/'..mainapi.Profile..mainapi.Place..'.txt') and delfile then
+			delfile('DogVape/profiles/'..mainapi.Profile..mainapi.Place..'.txt')
 		end
 		shared.vapereload = true
 		if shared.VapeDeveloper then
-			loadstring(readfile('0lyzll/init.lua'), 'init')()
+			loadstring(readfile('DogVape/init.lua'), 'init')()
 		else
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/0lyzll/0lyzll/'..readfile('0lyzll/profiles/commit.txt')..'/init.lua', true))()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/0lyzll/DogVape/'..readfile('DogVape/profiles/commit.txt')..'/init.lua', true))()
 		end
 	end,
 	Tooltip = 'This will set your profile to the default settings of Vape'
@@ -3834,9 +3834,9 @@ topbar:CreateButton({
 	Function = function()
 		shared.vapereload = true
 		if shared.VapeDeveloper then
-			loadstring(readfile('0lyzll/init.lua'), 'init')()
+			loadstring(readfile('DogVape/init.lua'), 'init')()
 		else
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/0lyzll/0lyzll/'..readfile('0lyzll/profiles/commit.txt')..'/init.lua', true))()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/0lyzll/DogVape/'..readfile('DogVape/profiles/commit.txt')..'/init.lua', true))()
 		end
 	end,
 	Tooltip = 'Reloads vape for debugging purposes'
@@ -4009,7 +4009,7 @@ mainapi.Libraries.targetinfo = targetinfo
 
 local textgui = mainapi:CreateOverlay({
 	Name = 'Text GUI',
-	Icon = getcustomasset('0lyzll/assets/old/textguiicon.png'),
+	Icon = getcustomasset('DogVape/assets/old/textguiicon.png'),
 	WindowSize = 178,
 	Function = function()
 		mainapi:UpdateTextGUI()
@@ -4097,7 +4097,7 @@ VapeLogo.BackgroundTransparency = 1
 VapeLogo.BorderSizePixel = 0
 VapeLogo.Visible = true
 VapeLogo.BackgroundColor3 = Color3.new()
-VapeLogo.Image = getcustomasset('0lyzll/assets/old/textvape.png')
+VapeLogo.Image = getcustomasset('DogVape/assets/old/textvape.png')
 VapeLogo.Parent = textgui.Children
 
 local lastside = textgui.Children.AbsolutePosition.X > (gui.AbsoluteSize.X / 2)
@@ -4119,7 +4119,7 @@ VapeLogoV4.Position = UDim2.new(1, 1, 0, -2)
 VapeLogoV4.BackgroundColor3 = Color3.new()
 VapeLogoV4.BackgroundTransparency = 1
 VapeLogoV4.BorderSizePixel = 0
-VapeLogoV4.Image = getcustomasset('0lyzll/assets/old/textv4.png')
+VapeLogoV4.Image = getcustomasset('DogVape/assets/old/textv4.png')
 VapeLogoV4.Parent = VapeLogo
 local VapeLogoShadow = VapeLogo:Clone()
 VapeLogoShadow.Position = UDim2.fromOffset(1, 1)

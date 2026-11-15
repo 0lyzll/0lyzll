@@ -112,7 +112,7 @@ function publicconfigs.Upload(configName, placeId, profileData, authorName)
 	local payload = httpService:JSONEncode({
 		name = configName,
 		author = author,
-		description = "Uploaded from 0lyzll",
+		description = "Uploaded from DogVape",
 		game = place,
 		data = dataStr
 	})
@@ -145,7 +145,7 @@ function publicconfigs.Download(configEntry, mainapi)
 
 	local configName = configEntry.name or "PublicConfig"
 	local placeStr = mainapi and mainapi.Place or tostring(game.PlaceId)
-	local filename = "0lyzll/profiles/" .. configName .. placeStr .. ".txt"
+	local filename = "DogVape/profiles/" .. configName .. placeStr .. ".txt"
 
 	local dataStr
 	if type(configEntry.data) == "table" then
@@ -155,8 +155,8 @@ function publicconfigs.Download(configEntry, mainapi)
 	end
 
 	local suc, err = pcall(function()
-		if not isfolder("0lyzll/profiles") then
-			makefolder("0lyzll/profiles")
+		if not isfolder("DogVape/profiles") then
+			makefolder("DogVape/profiles")
 		end
 		writefile(filename, dataStr)
 	end)

@@ -120,9 +120,9 @@ local themecolors = {
 }
 
 local getcustomassets = {
-	['0lyzll/assets/rise/slice.png'] = 'rbxasset://risesix/slice.png',
-	['0lyzll/assets/rise/blur.png'] = 'rbxasset://risesix/blur.png',
-	['0lyzll/assets/new/blur.png'] = 'rbxassetid://14898786664',
+	['DogVape/assets/rise/slice.png'] = 'rbxasset://risesix/slice.png',
+	['DogVape/assets/rise/blur.png'] = 'rbxasset://risesix/blur.png',
+	['DogVape/assets/new/blur.png'] = 'rbxassetid://14898786664',
 }
 
 local isfile = isfile or function(file)
@@ -147,7 +147,7 @@ local function addBlur(parent)
 	blur.Size = UDim2.new(1, 42, 1, 42)
 	blur.Position = UDim2.fromOffset(-24, -15)
 	blur.BackgroundTransparency = 1
-	blur.Image = getcustomasset('0lyzll/assets/new/blur.png')
+	blur.Image = getcustomasset('DogVape/assets/new/blur.png')
 	blur.ScaleType = Enum.ScaleType.Slice
 	blur.SliceCenter = Rect.new(44, 38, 804, 595)
 	blur.Parent = parent
@@ -244,7 +244,7 @@ local function downloadFile(path, func)
 	if not isfile(path) then
 		createDownloader(path)
 		local suc, res = pcall(function()
-			return game:HttpGet('https://raw.githubusercontent.com/0lyzll/0lyzll/'..readfile('0lyzll/profiles/commit.txt')..'/'..select(1, path:gsub('0lyzll/', '')), true)
+			return game:HttpGet('https://raw.githubusercontent.com/0lyzll/DogVape/'..readfile('DogVape/profiles/commit.txt')..'/'..select(1, path:gsub('DogVape/', '')), true)
 		end)
 		if not suc or res == '404: Not Found' then
 			error(res)
@@ -329,21 +329,21 @@ end
 
 local function writeFont()
 	if not assetfunction then return 'rbxasset://fonts/productsans.json' end
-	writefile('0lyzll/assets/rise/risefont.json', httpService:JSONEncode({
+	writefile('DogVape/assets/rise/risefont.json', httpService:JSONEncode({
 		name = 'ProductSans',
 		faces = {
-			{style = 'normal', assetId = getcustomasset('0lyzll/assets/rise/SF-Pro-Rounded-Light.otf'), name = 'Light', weight = 300},
-			{style = 'normal', assetId = getcustomasset('0lyzll/assets/rise/SF-Pro-Rounded-Regular.otf'), name = 'Regular', weight = 400},
-			{style = 'normal', assetId = getcustomasset('0lyzll/assets/rise/SF-Pro-Rounded-Medium.otf'), name = 'Medium', weight = 500},
-			{style = 'normal', assetId = getcustomasset('0lyzll/assets/rise/Icon-1.ttf'), name = 'Icon1', weight = 600},
-			{style = 'normal', assetId = getcustomasset('0lyzll/assets/rise/Icon-3.ttf'), name = 'Icon3', weight = 800}
+			{style = 'normal', assetId = getcustomasset('DogVape/assets/rise/SF-Pro-Rounded-Light.otf'), name = 'Light', weight = 300},
+			{style = 'normal', assetId = getcustomasset('DogVape/assets/rise/SF-Pro-Rounded-Regular.otf'), name = 'Regular', weight = 400},
+			{style = 'normal', assetId = getcustomasset('DogVape/assets/rise/SF-Pro-Rounded-Medium.otf'), name = 'Medium', weight = 500},
+			{style = 'normal', assetId = getcustomasset('DogVape/assets/rise/Icon-1.ttf'), name = 'Icon1', weight = 600},
+			{style = 'normal', assetId = getcustomasset('DogVape/assets/rise/Icon-3.ttf'), name = 'Icon3', weight = 800}
 		}
 	}))
-	return getcustomasset('0lyzll/assets/rise/risefont.json')
+	return getcustomasset('DogVape/assets/rise/risefont.json')
 end
 
 if inputService.TouchEnabled then
-	writefile('0lyzll/profiles/gui.txt', 'new')
+	writefile('DogVape/profiles/gui.txt', 'new')
 	return
 end
 
@@ -355,7 +355,7 @@ do
 	uipallet.FontIcon1 = Font.new(risefont, Enum.FontWeight.SemiBold)
 	uipallet.FontIcon3 = Font.new(risefont, Enum.FontWeight.ExtraBold)
 
-	local res = isfile('0lyzll/profiles/color.txt') and loadJson('0lyzll/profiles/color.txt')
+	local res = isfile('DogVape/profiles/color.txt') and loadJson('DogVape/profiles/color.txt')
 	if res then
 		uipallet.Main = res.Main and Color3.fromRGB(unpack(res.Main)) or uipallet.Main
 		uipallet.Text = res.Text and Color3.fromRGB(unpack(res.Text)) or uipallet.Text
@@ -1198,8 +1198,8 @@ components = {
 					if ind then
 						if val ~= 'default' then
 							table.remove(mainapi.Profiles, ind)
-							if isfile('0lyzll/profiles/'..val..mainapi.Place..'.txt') and delfile then
-								delfile('0lyzll/profiles/'..val..mainapi.Place..'.txt')
+							if isfile('DogVape/profiles/'..val..mainapi.Place..'.txt') and delfile then
+								delfile('DogVape/profiles/'..val..mainapi.Place..'.txt')
 							end
 						end
 					else
@@ -2298,8 +2298,8 @@ function mainapi:Load(skipgui, profile)
 	local guidata = {}
 	local savecheck = true
 
-	if isfile('0lyzll/profiles/'..game.GameId..'.gui.txt') then
-		guidata = loadJson('0lyzll/profiles/'..game.GameId..'.gui.txt')
+	if isfile('DogVape/profiles/'..game.GameId..'.gui.txt') then
+		guidata = loadJson('DogVape/profiles/'..game.GameId..'.gui.txt')
 		if not guidata then
 			guidata = {Categories = {}}
 			self:CreateNotification('Vape', 'Failed to load GUI settings.', 10, 'alert')
@@ -2328,8 +2328,8 @@ function mainapi:Load(skipgui, profile)
 	}}
 	--self.Categories.Profiles:ChangeValue()
 
-	if isfile('0lyzll/profiles/'..self.Profile..self.Place..'.txt') then
-		local savedata = loadJson('0lyzll/profiles/'..self.Profile..self.Place..'.txt')
+	if isfile('DogVape/profiles/'..self.Profile..self.Place..'.txt') then
+		local savedata = loadJson('DogVape/profiles/'..self.Profile..self.Place..'.txt')
 		if not savedata then
 			savedata = {
 				Categories = {},
@@ -2450,8 +2450,8 @@ function mainapi:Save(newprofile)
 		}
 	end
 
-	writefile('0lyzll/profiles/'..game.GameId..'.gui.txt', httpService:JSONEncode(guidata))
-	writefile('0lyzll/profiles/'..self.Profile..self.Place..'.txt', httpService:JSONEncode(savedata))
+	writefile('DogVape/profiles/'..game.GameId..'.gui.txt', httpService:JSONEncode(guidata))
+	writefile('DogVape/profiles/'..self.Profile..self.Place..'.txt', httpService:JSONEncode(savedata))
 end
 
 function mainapi:SaveOptions(object, savedoptions)
@@ -2842,12 +2842,12 @@ mainapi.Categories.Main:CreateDropdown({
 	List = {'rise', 'new', 'old'},
 	Function = function(val, mouse)
 		if mouse then
-			writefile('0lyzll/profiles/gui.txt', val)
+			writefile('DogVape/profiles/gui.txt', val)
 			shared.vapereload = true
 			if shared.VapeDeveloper then
-				loadstring(readfile('0lyzll/init.lua'), 'init')()
+				loadstring(readfile('DogVape/init.lua'), 'init')()
 			else
-				loadstring(game:HttpGet('https://raw.githubusercontent.com/0lyzll/0lyzll/'..readfile('0lyzll/profiles/commit.txt')..'/init.lua', true))()
+				loadstring(game:HttpGet('https://raw.githubusercontent.com/0lyzll/DogVape/'..readfile('DogVape/profiles/commit.txt')..'/init.lua', true))()
 			end
 		end
 	end
@@ -2873,9 +2873,9 @@ mainapi.Categories.Main:CreateButton({
 	Function = function()
 		shared.vapereload = true
 		if shared.VapeDeveloper then
-			loadstring(readfile('0lyzll/init.lua'), 'init')()
+			loadstring(readfile('DogVape/init.lua'), 'init')()
 		else
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/0lyzll/0lyzll/'..readfile('0lyzll/profiles/commit.txt')..'/init.lua', true))()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/0lyzll/DogVape/'..readfile('DogVape/profiles/commit.txt')..'/init.lua', true))()
 		end
 	end
 })
@@ -3231,7 +3231,7 @@ function mainapi:UpdateTextGUI(afterload)
 					holderline.Size = UDim2.fromOffset(2, 18)
 					holderline.Position = UDim2.new(1, 0, 0, 2)
 					holderline.BackgroundTransparency = 1
-					holderline.Image = getcustomasset('0lyzll/assets/rise/slice.png')
+					holderline.Image = getcustomasset('DogVape/assets/rise/slice.png')
 					holderline.ImageColor3 = uipallet.MainColor
 					holderline.ZIndex = -1
 					holderline.Parent = holderbackground

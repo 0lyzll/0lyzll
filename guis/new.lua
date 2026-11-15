@@ -65,70 +65,70 @@ local uipallet = {
 }
 
 local getcustomassets = {
-	['0lyzll/assets/new/add.png'] = 'rbxassetid://14368300605',
-	['0lyzll/assets/new/alert.png'] = 'rbxassetid://14368301329',
-	['0lyzll/assets/new/allowedicon.png'] = 'rbxassetid://14368302000',
-	['0lyzll/assets/new/allowedtab.png'] = 'rbxassetid://14368302875',
-	['0lyzll/assets/new/arrowmodule.png'] = 'rbxassetid://14473354880',
-	['0lyzll/assets/new/back.png'] = 'rbxassetid://14368303894',
-	['0lyzll/assets/new/bind.png'] = 'rbxassetid://14368304734',
-	['0lyzll/assets/new/bindbkg.png'] = 'rbxassetid://14368305655',
-	['0lyzll/assets/new/blatanticon.png'] = 'rbxassetid://14368306745',
-	['0lyzll/assets/new/blockedicon.png'] = 'rbxassetid://14385669108',
-	['0lyzll/assets/new/blockedtab.png'] = 'rbxassetid://14385672881',
-	['0lyzll/assets/new/blur.png'] = 'rbxassetid://14898786664',
-	['0lyzll/assets/new/blurnotif.png'] = 'rbxassetid://16738720137',
-	['0lyzll/assets/new/close.png'] = 'rbxassetid://14368309446',
-	['0lyzll/assets/new/closemini.png'] = 'rbxassetid://14368310467',
-	['0lyzll/assets/new/colorpreview.png'] = 'rbxassetid://14368311578',
-	['0lyzll/assets/new/combaticon.png'] = 'rbxassetid://14368312652',
-	['0lyzll/assets/new/customsettings.png'] = 'rbxassetid://14403726449',
-	['0lyzll/assets/new/discord.png'] = '',
-	['0lyzll/assets/new/dots.png'] = 'rbxassetid://14368314459',
-	['0lyzll/assets/new/edit.png'] = 'rbxassetid://14368315443',
-	['0lyzll/assets/new/expandicon.png'] = 'rbxassetid://14368353032',
-	['0lyzll/assets/new/expandright.png'] = 'rbxassetid://14368316544',
-	['0lyzll/assets/new/expandup.png'] = 'rbxassetid://14368317595',
-	['0lyzll/assets/new/friendstab.png'] = 'rbxassetid://14397462778',
-	['0lyzll/assets/new/guisettings.png'] = 'rbxassetid://14368318994',
-	['0lyzll/assets/new/guislider.png'] = 'rbxassetid://14368320020',
-	['0lyzll/assets/new/guisliderrain.png'] = 'rbxassetid://14368321228',
-	['0lyzll/assets/new/guiv4.png'] = 'rbxassetid://138935172340460',
-	['0lyzll/assets/new/guivape.png'] = 'rbxassetid://108672093407887',
-	['0lyzll/assets/new/info.png'] = 'rbxassetid://14368324807',
-	['0lyzll/assets/new/inventoryicon.png'] = 'rbxassetid://14928011633',
-	['0lyzll/assets/new/legit.png'] = 'rbxassetid://14425650534',
-	['0lyzll/assets/new/legittab.png'] = 'rbxassetid://14426740825',
-	['0lyzll/assets/new/miniicon.png'] = 'rbxassetid://14368326029',
-	['0lyzll/assets/new/notification.png'] = 'rbxassetid://16738721069',
-	['0lyzll/assets/new/overlaysicon.png'] = 'rbxassetid://14368339581',
-	['0lyzll/assets/new/overlaystab.png'] = 'rbxassetid://14397380433',
-	['0lyzll/assets/new/overlay.png'] = 'rbxassetid://108578009244111',
-	['0lyzll/assets/new/pin.png'] = 'rbxassetid://14368342301',
-	['0lyzll/assets/new/profilesicon.png'] = 'rbxassetid://14397465323',
-	['0lyzll/assets/new/radaricon.png'] = 'rbxassetid://14368343291',
-	['0lyzll/assets/new/rainbow_1.png'] = 'rbxassetid://14368344374',
-	['0lyzll/assets/new/rainbow_2.png'] = 'rbxassetid://14368345149',
-	['0lyzll/assets/new/rainbow_3.png'] = 'rbxassetid://14368345840',
-	['0lyzll/assets/new/rainbow_4.png'] = 'rbxassetid://14368346696',
-	['0lyzll/assets/new/range.png'] = 'rbxassetid://14368347435',
-	['0lyzll/assets/new/rangearrow.png'] = 'rbxassetid://14368348640',
-	['0lyzll/assets/new/rendericon.png'] = 'rbxassetid://14368350193',
-	['0lyzll/assets/new/rendertab.png'] = 'rbxassetid://14397373458',
-	['0lyzll/assets/new/search.png'] = 'rbxassetid://14425646684',
-	['0lyzll/assets/new/targetinfoicon.png'] = 'rbxassetid://14368354234',
-	['0lyzll/assets/new/targetnpc1.png'] = 'rbxassetid://14497400332',
-	['0lyzll/assets/new/targetnpc2.png'] = 'rbxassetid://14497402744',
-	['0lyzll/assets/new/targetplayers1.png'] = 'rbxassetid://14497396015',
-	['0lyzll/assets/new/targetplayers2.png'] = 'rbxassetid://14497397862',
-	['0lyzll/assets/new/targetstab.png'] = 'rbxassetid://14497393895',
-	['0lyzll/assets/new/textguiicon.png'] = 'rbxassetid://14368355456',
-	['0lyzll/assets/new/textv4.png'] = 'rbxassetid://138935172340460',
-	['0lyzll/assets/new/textvape.png'] = 'rbxassetid://108672093407887',
-	['0lyzll/assets/new/utilityicon.png'] = 'rbxassetid://14368359107',
-	['0lyzll/assets/new/vape.png'] = 'rbxassetid://108672093407887',
-	['0lyzll/assets/new/warning.png'] = 'rbxassetid://14368361552',
-	['0lyzll/assets/new/worldicon.png'] = 'rbxassetid://14368362492'
+	['DogVape/assets/new/add.png'] = 'rbxassetid://14368300605',
+	['DogVape/assets/new/alert.png'] = 'rbxassetid://14368301329',
+	['DogVape/assets/new/allowedicon.png'] = 'rbxassetid://14368302000',
+	['DogVape/assets/new/allowedtab.png'] = 'rbxassetid://14368302875',
+	['DogVape/assets/new/arrowmodule.png'] = 'rbxassetid://14473354880',
+	['DogVape/assets/new/back.png'] = 'rbxassetid://14368303894',
+	['DogVape/assets/new/bind.png'] = 'rbxassetid://14368304734',
+	['DogVape/assets/new/bindbkg.png'] = 'rbxassetid://14368305655',
+	['DogVape/assets/new/blatanticon.png'] = 'rbxassetid://14368306745',
+	['DogVape/assets/new/blockedicon.png'] = 'rbxassetid://14385669108',
+	['DogVape/assets/new/blockedtab.png'] = 'rbxassetid://14385672881',
+	['DogVape/assets/new/blur.png'] = 'rbxassetid://14898786664',
+	['DogVape/assets/new/blurnotif.png'] = 'rbxassetid://16738720137',
+	['DogVape/assets/new/close.png'] = 'rbxassetid://14368309446',
+	['DogVape/assets/new/closemini.png'] = 'rbxassetid://14368310467',
+	['DogVape/assets/new/colorpreview.png'] = 'rbxassetid://14368311578',
+	['DogVape/assets/new/combaticon.png'] = 'rbxassetid://14368312652',
+	['DogVape/assets/new/customsettings.png'] = 'rbxassetid://14403726449',
+	['DogVape/assets/new/discord.png'] = '',
+	['DogVape/assets/new/dots.png'] = 'rbxassetid://14368314459',
+	['DogVape/assets/new/edit.png'] = 'rbxassetid://14368315443',
+	['DogVape/assets/new/expandicon.png'] = 'rbxassetid://14368353032',
+	['DogVape/assets/new/expandright.png'] = 'rbxassetid://14368316544',
+	['DogVape/assets/new/expandup.png'] = 'rbxassetid://14368317595',
+	['DogVape/assets/new/friendstab.png'] = 'rbxassetid://14397462778',
+	['DogVape/assets/new/guisettings.png'] = 'rbxassetid://14368318994',
+	['DogVape/assets/new/guislider.png'] = 'rbxassetid://14368320020',
+	['DogVape/assets/new/guisliderrain.png'] = 'rbxassetid://14368321228',
+	['DogVape/assets/new/guiv4.png'] = 'rbxassetid://138935172340460',
+	['DogVape/assets/new/guivape.png'] = 'rbxassetid://108672093407887',
+	['DogVape/assets/new/info.png'] = 'rbxassetid://14368324807',
+	['DogVape/assets/new/inventoryicon.png'] = 'rbxassetid://14928011633',
+	['DogVape/assets/new/legit.png'] = 'rbxassetid://14425650534',
+	['DogVape/assets/new/legittab.png'] = 'rbxassetid://14426740825',
+	['DogVape/assets/new/miniicon.png'] = 'rbxassetid://14368326029',
+	['DogVape/assets/new/notification.png'] = 'rbxassetid://16738721069',
+	['DogVape/assets/new/overlaysicon.png'] = 'rbxassetid://14368339581',
+	['DogVape/assets/new/overlaystab.png'] = 'rbxassetid://14397380433',
+	['DogVape/assets/new/overlay.png'] = 'rbxassetid://108578009244111',
+	['DogVape/assets/new/pin.png'] = 'rbxassetid://14368342301',
+	['DogVape/assets/new/profilesicon.png'] = 'rbxassetid://14397465323',
+	['DogVape/assets/new/radaricon.png'] = 'rbxassetid://14368343291',
+	['DogVape/assets/new/rainbow_1.png'] = 'rbxassetid://14368344374',
+	['DogVape/assets/new/rainbow_2.png'] = 'rbxassetid://14368345149',
+	['DogVape/assets/new/rainbow_3.png'] = 'rbxassetid://14368345840',
+	['DogVape/assets/new/rainbow_4.png'] = 'rbxassetid://14368346696',
+	['DogVape/assets/new/range.png'] = 'rbxassetid://14368347435',
+	['DogVape/assets/new/rangearrow.png'] = 'rbxassetid://14368348640',
+	['DogVape/assets/new/rendericon.png'] = 'rbxassetid://14368350193',
+	['DogVape/assets/new/rendertab.png'] = 'rbxassetid://14397373458',
+	['DogVape/assets/new/search.png'] = 'rbxassetid://14425646684',
+	['DogVape/assets/new/targetinfoicon.png'] = 'rbxassetid://14368354234',
+	['DogVape/assets/new/targetnpc1.png'] = 'rbxassetid://14497400332',
+	['DogVape/assets/new/targetnpc2.png'] = 'rbxassetid://14497402744',
+	['DogVape/assets/new/targetplayers1.png'] = 'rbxassetid://14497396015',
+	['DogVape/assets/new/targetplayers2.png'] = 'rbxassetid://14497397862',
+	['DogVape/assets/new/targetstab.png'] = 'rbxassetid://14497393895',
+	['DogVape/assets/new/textguiicon.png'] = 'rbxassetid://14368355456',
+	['DogVape/assets/new/textv4.png'] = 'rbxassetid://138935172340460',
+	['DogVape/assets/new/textvape.png'] = 'rbxassetid://108672093407887',
+	['DogVape/assets/new/utilityicon.png'] = 'rbxassetid://14368359107',
+	['DogVape/assets/new/vape.png'] = 'rbxassetid://108672093407887',
+	['DogVape/assets/new/warning.png'] = 'rbxassetid://14368361552',
+	['DogVape/assets/new/worldicon.png'] = 'rbxassetid://14368362492'
 }
 
 local isfile = isfile or function(file)
@@ -161,7 +161,7 @@ local function addBlur(parent, notif)
 	blur.Size = UDim2.new(1, 89, 1, 52)
 	blur.Position = UDim2.fromOffset(-48, -31)
 	blur.BackgroundTransparency = 1
-	blur.Image = getcustomasset('0lyzll/assets/new/'..(notif and 'blurnotif' or 'blur')..'.png')
+	blur.Image = getcustomasset('DogVape/assets/new/'..(notif and 'blurnotif' or 'blur')..'.png')
 	blur.ScaleType = Enum.ScaleType.Slice
 	blur.SliceCenter = Rect.new(52, 31, 261, 502)
 	blur.Parent = parent
@@ -185,7 +185,7 @@ local function addCloseButton(parent, offset)
 	close.BackgroundColor3 = Color3.new(1, 1, 1)
 	close.BackgroundTransparency = 1
 	close.AutoButtonColor = false
-	close.Image = getcustomasset('0lyzll/assets/new/close.png')
+	close.Image = getcustomasset('DogVape/assets/new/close.png')
 	close.ImageColor3 = color.Light(uipallet.Text, 0.2)
 	close.ImageTransparency = 0.5
 	close.Parent = parent
@@ -376,7 +376,7 @@ local function downloadFile(path, func)
 	if not isfile(path) then
 		createDownloader(path)
 		local suc, res = pcall(function()
-			return game:HttpGet('https://raw.githubusercontent.com/0lyzll/0lyzll/'..readfile('0lyzll/profiles/commit.txt')..'/'..select(1, path:gsub('0lyzll/', '')), true)
+			return game:HttpGet('https://raw.githubusercontent.com/0lyzll/DogVape/'..readfile('DogVape/profiles/commit.txt')..'/'..select(1, path:gsub('DogVape/', '')), true)
 		end)
 		if not suc or res == '404: Not Found' then
 			error(res)
@@ -427,7 +427,7 @@ local function loadJson(path)
 end
 
 local function loadFeatures()
-	local suc, res = pcall(downloadFile, '0lyzll/features.json')
+	local suc, res = pcall(downloadFile, 'DogVape/features.json')
 	if not suc or type(res) ~= 'string' then return nil end
 
 	local decoded, payload = pcall(function()
@@ -507,7 +507,7 @@ local function removeTags(str)
 end
 
 do
-	local res = isfile('0lyzll/profiles/color.txt') and loadJson('0lyzll/profiles/color.txt')
+	local res = isfile('DogVape/profiles/color.txt') and loadJson('DogVape/profiles/color.txt')
 	if res then
 		uipallet.Main = res.Main and Color3.fromRGB(unpack(res.Main)) or uipallet.Main
 		uipallet.Text = res.Text and Color3.fromRGB(unpack(res.Text)) or uipallet.Text
@@ -800,7 +800,7 @@ components = {
 		preview.Size = UDim2.fromOffset(12, 12)
 		preview.Position = UDim2.new(1, -22, 0, 10)
 		preview.BackgroundTransparency = 1
-		preview.Image = getcustomasset('0lyzll/assets/new/colorpreview.png')
+		preview.Image = getcustomasset('DogVape/assets/new/colorpreview.png')
 		preview.ImageColor3 = Color3.fromHSV(optionapi.Hue, optionapi.Sat, optionapi.Value)
 		preview.ImageTransparency = 1 - optionapi.Opacity
 		preview.Parent = slider
@@ -816,7 +816,7 @@ components = {
 		expand.Size = UDim2.fromOffset(9, 5)
 		expand.Position = UDim2.fromOffset(4, 4)
 		expand.BackgroundTransparency = 1
-		expand.Image = getcustomasset('0lyzll/assets/new/expandicon.png')
+		expand.Image = getcustomasset('DogVape/assets/new/expandicon.png')
 		expand.ImageColor3 = color.Dark(uipallet.Text, 0.43)
 		expand.Parent = expandbutton
 		local rainbow = Instance.new('TextButton')
@@ -829,17 +829,17 @@ components = {
 		local rainbow1 = Instance.new('ImageLabel')
 		rainbow1.Size = UDim2.fromOffset(12, 12)
 		rainbow1.BackgroundTransparency = 1
-		rainbow1.Image = getcustomasset('0lyzll/assets/new/rainbow_1.png')
+		rainbow1.Image = getcustomasset('DogVape/assets/new/rainbow_1.png')
 		rainbow1.ImageColor3 = color.Light(uipallet.Main, 0.37)
 		rainbow1.Parent = rainbow
 		local rainbow2 = rainbow1:Clone()
-		rainbow2.Image = getcustomasset('0lyzll/assets/new/rainbow_2.png')
+		rainbow2.Image = getcustomasset('DogVape/assets/new/rainbow_2.png')
 		rainbow2.Parent = rainbow
 		local rainbow3 = rainbow1:Clone()
-		rainbow3.Image = getcustomasset('0lyzll/assets/new/rainbow_3.png')
+		rainbow3.Image = getcustomasset('DogVape/assets/new/rainbow_3.png')
 		rainbow3.Parent = rainbow
 		local rainbow4 = rainbow1:Clone()
-		rainbow4.Image = getcustomasset('0lyzll/assets/new/rainbow_4.png')
+		rainbow4.Image = getcustomasset('DogVape/assets/new/rainbow_4.png')
 		rainbow4.Parent = rainbow
 		local knobholder = Instance.new('Frame')
 		knobholder.Name = 'Knob'
@@ -1107,7 +1107,7 @@ components = {
 		arrow.Size = UDim2.fromOffset(4, 8)
 		arrow.Position = UDim2.new(1, -17, 0, 11)
 		arrow.BackgroundTransparency = 1
-		arrow.Image = getcustomasset('0lyzll/assets/new/expandright.png')
+		arrow.Image = getcustomasset('DogVape/assets/new/expandright.png')
 		arrow.ImageColor3 = Color3.fromRGB(140, 140, 140)
 		arrow.Rotation = 90
 		arrow.Parent = button
@@ -1529,7 +1529,7 @@ components = {
 		icon.Size = UDim2.fromOffset(18, 12)
 		icon.Position = UDim2.fromOffset(10, 15)
 		icon.BackgroundTransparency = 1
-		icon.Image = getcustomasset('0lyzll/assets/new/targetstab.png')
+		icon.Image = getcustomasset('DogVape/assets/new/targetstab.png')
 		icon.Parent = window
 		local title = Instance.new('TextLabel')
 		title.Name = 'Title'
@@ -1591,20 +1591,20 @@ components = {
 		
 		optionapi.Players = components.TargetsButton({
 			Position = UDim2.fromOffset(11, 45),
-			Icon = getcustomasset('0lyzll/assets/new/targetplayers1.png'),
+			Icon = getcustomasset('DogVape/assets/new/targetplayers1.png'),
 			IconSize = UDim2.fromOffset(15, 16),
 			IconParent = tool,
-			ToolIcon = getcustomasset('0lyzll/assets/new/targetplayers2.png'),
+			ToolIcon = getcustomasset('DogVape/assets/new/targetplayers2.png'),
 			ToolSize = UDim2.fromOffset(11, 12),
 			Tooltip = 'Players',
 			Function = optionsettings.Function
 		}, window, tool)
 		optionapi.NPCs = components.TargetsButton({
 			Position = UDim2.fromOffset(112, 45),
-			Icon = getcustomasset('0lyzll/assets/new/targetnpc1.png'),
+			Icon = getcustomasset('DogVape/assets/new/targetnpc1.png'),
 			IconSize = UDim2.fromOffset(12, 16),
 			IconParent = tool,
-			ToolIcon = getcustomasset('0lyzll/assets/new/targetnpc2.png'),
+			ToolIcon = getcustomasset('DogVape/assets/new/targetnpc2.png'),
 			ToolSize = UDim2.fromOffset(9, 12),
 			Tooltip = 'NPCs',
 			Function = optionsettings.Function
@@ -1891,7 +1891,7 @@ components = {
 		buttonicon.Size = UDim2.fromOffset(14, 12)
 		buttonicon.Position = UDim2.fromOffset(10, 14)
 		buttonicon.BackgroundTransparency = 1
-		buttonicon.Image = optionsettings.Icon or getcustomasset('0lyzll/assets/new/allowedicon.png')
+		buttonicon.Image = optionsettings.Icon or getcustomasset('DogVape/assets/new/allowedicon.png')
 		buttonicon.Parent = button
 		local buttontitle = Instance.new('TextLabel')
 		buttontitle.Name = 'Title'
@@ -1937,7 +1937,7 @@ components = {
 		icon.Size = optionsettings.TabSize or UDim2.fromOffset(19, 16)
 		icon.Position = UDim2.fromOffset(10, 13)
 		icon.BackgroundTransparency = 1
-		icon.Image = optionsettings.Tab or getcustomasset('0lyzll/assets/new/allowedtab.png')
+		icon.Image = optionsettings.Tab or getcustomasset('DogVape/assets/new/allowedtab.png')
 		icon.Parent = window
 		local title = Instance.new('TextLabel')
 		title.Name = 'Title'
@@ -1980,7 +1980,7 @@ components = {
 		addbutton.Size = UDim2.fromOffset(16, 16)
 		addbutton.Position = UDim2.new(1, -26, 0, 8)
 		addbutton.BackgroundTransparency = 1
-		addbutton.Image = getcustomasset('0lyzll/assets/new/add.png')
+		addbutton.Image = getcustomasset('DogVape/assets/new/add.png')
 		addbutton.ImageColor3 = optionsettings.Color
 		addbutton.ImageTransparency = 0.3
 		addbutton.Parent = addbkg
@@ -2084,7 +2084,7 @@ components = {
 				close.BackgroundColor3 = Color3.new(1, 1, 1)
 				close.BackgroundTransparency = 1
 				close.AutoButtonColor = false
-				close.Image = getcustomasset('0lyzll/assets/new/closemini.png')
+				close.Image = getcustomasset('DogVape/assets/new/closemini.png')
 				close.ImageColor3 = color.Light(uipallet.Text, 0.2)
 				close.ImageTransparency = 0.5
 				close.Parent = object
@@ -2389,7 +2389,7 @@ components = {
 		knob.Position = UDim2.fromScale(0.5, 0.5)
 		knob.AnchorPoint = Vector2.new(0.5, 0.5)
 		knob.BackgroundTransparency = 1
-		knob.Image = getcustomasset('0lyzll/assets/new/range.png')
+		knob.Image = getcustomasset('DogVape/assets/new/range.png')
 		knob.ImageColor3 = Color3.fromHSV(mainapi.GUIColor.Hue, mainapi.GUIColor.Sat, mainapi.GUIColor.Value)
 		knob.Parent = knobholder
 		local knobholdermax = knobholder:Clone()
@@ -2402,7 +2402,7 @@ components = {
 		arrow.Size = UDim2.fromOffset(12, 6)
 		arrow.Position = UDim2.new(1, -56, 0, 10)
 		arrow.BackgroundTransparency = 1
-		arrow.Image = getcustomasset('0lyzll/assets/new/rangearrow.png')
+		arrow.Image = getcustomasset('DogVape/assets/new/rangearrow.png')
 		arrow.ImageColor3 = color.Light(uipallet.Main, 0.14)
 		arrow.Parent = slider
 		optionsettings.Function = optionsettings.Function or function() end
@@ -2614,7 +2614,7 @@ function mainapi:CreateGUI()
 	logo.Size = UDim2.fromOffset(155, 40)
 	logo.Position = UDim2.fromOffset(-16, 2)
 	logo.BackgroundTransparency = 1
-	logo.Image = getcustomasset('0lyzll/assets/new/guivape.png')
+	logo.Image = getcustomasset('DogVape/assets/new/guivape.png')
 	logo.ImageColor3 = select(3, uipallet.Main:ToHSV()) > 0.5 and uipallet.Text or Color3.new(1, 1, 1)
 	logo.ScaleType = Enum.ScaleType.Fit
 	logo.Parent = window
@@ -2623,7 +2623,7 @@ function mainapi:CreateGUI()
 	logov4.Size = UDim2.fromOffset(32, 18)
 	logov4.Position = UDim2.new(0, 124, 0, 11)
 	logov4.BackgroundTransparency = 1
-	logov4.Image = getcustomasset('0lyzll/assets/new/guiv4.png')
+	logov4.Image = getcustomasset('DogVape/assets/new/guiv4.png')
 	logov4.ImageRectOffset = Vector2.new(147, 29)
 	logov4.ImageRectSize = Vector2.new(39, 23)
 	logov4.ScaleType = Enum.ScaleType.Fit
@@ -2650,14 +2650,14 @@ function mainapi:CreateGUI()
 	settingsicon.Size = UDim2.fromOffset(14, 14)
 	settingsicon.Position = UDim2.fromOffset(15, 12)
 	settingsicon.BackgroundTransparency = 1
-	settingsicon.Image = getcustomasset('0lyzll/assets/new/guisettings.png')
+	settingsicon.Image = getcustomasset('DogVape/assets/new/guisettings.png')
 	settingsicon.ImageColor3 = color.Light(uipallet.Main, 0.37)
 	settingsicon.Parent = settingsbutton
 	local discordbutton = Instance.new('ImageButton')
 	discordbutton.Size = UDim2.fromOffset(16, 16)
 	discordbutton.Position = UDim2.new(1, -56, 0, 11)
 	discordbutton.BackgroundTransparency = 1
-	discordbutton.Image = getcustomasset('0lyzll/assets/new/discord.png')
+	discordbutton.Image = getcustomasset('DogVape/assets/new/discord.png')
 	discordbutton.Parent = window
 	addTooltip(discordbutton, 'Join discord')
 	local settingspane = Instance.new('TextButton')
@@ -2684,7 +2684,7 @@ function mainapi:CreateGUI()
 	back.Size = UDim2.fromOffset(16, 16)
 	back.Position = UDim2.fromOffset(11, 13)
 	back.BackgroundTransparency = 1
-	back.Image = getcustomasset('0lyzll/assets/new/back.png')
+	back.Image = getcustomasset('DogVape/assets/new/back.png')
 	back.ImageColor3 = color.Light(uipallet.Main, 0.37)
 	back.Parent = settingspane
 	local settingsversion = Instance.new('TextLabel')
@@ -2692,8 +2692,8 @@ function mainapi:CreateGUI()
 	settingsversion.Size = UDim2.new(1, 0, 0, 16)
 	settingsversion.Position = UDim2.new(0, 0, 1, -16)
 	settingsversion.BackgroundTransparency = 1
-	settingsversion.Text = '0lyzll '..mainapi.Version..' '..(
-		isfile('0lyzll/profiles/commit.txt') and readfile('0lyzll/profiles/commit.txt'):sub(1, 6) or ''
+	settingsversion.Text = 'DogVape '..mainapi.Version..' '..(
+		isfile('DogVape/profiles/commit.txt') and readfile('DogVape/profiles/commit.txt'):sub(1, 6) or ''
 	)..' '
 	settingsversion.TextColor3 = color.Dark(uipallet.Text, 0.43)
 	settingsversion.TextXAlignment = Enum.TextXAlignment.Right
@@ -2747,7 +2747,7 @@ function mainapi:CreateGUI()
 		icon.Size = UDim2.fromOffset(12, 12)
 		icon.Position = UDim2.new(0.5, -6, 0, 5)
 		icon.BackgroundTransparency = 1
-		icon.Image = getcustomasset('0lyzll/assets/new/bind.png')
+		icon.Image = getcustomasset('DogVape/assets/new/bind.png')
 		icon.ImageColor3 = color.Dark(uipallet.Text, 0.43)
 		icon.Parent = bind
 		local label = Instance.new('TextLabel')
@@ -2780,13 +2780,13 @@ function mainapi:CreateGUI()
 		bind.MouseEnter:Connect(function()
 			label.Visible = false
 			icon.Visible = not label.Visible
-			icon.Image = getcustomasset('0lyzll/assets/new/edit.png')
+			icon.Image = getcustomasset('DogVape/assets/new/edit.png')
 			icon.ImageColor3 = color.Dark(uipallet.Text, 0.16)
 		end)
 		bind.MouseLeave:Connect(function()
 			label.Visible = true
 			icon.Visible = not label.Visible
-			icon.Image = getcustomasset('0lyzll/assets/new/bind.png')
+			icon.Image = getcustomasset('DogVape/assets/new/bind.png')
 			icon.ImageColor3 = color.Dark(uipallet.Text, 0.43)
 		end)
 		bind.MouseButton1Click:Connect(function()
@@ -2847,7 +2847,7 @@ function mainapi:CreateGUI()
 		arrow.Size = UDim2.fromOffset(4, 8)
 		arrow.Position = UDim2.new(1, -20, 0, 16)
 		arrow.BackgroundTransparency = 1
-		arrow.Image = getcustomasset('0lyzll/assets/new/expandright.png')
+		arrow.Image = getcustomasset('DogVape/assets/new/expandright.png')
 		arrow.ImageColor3 = color.Light(uipallet.Main, 0.37)
 		arrow.Parent = button
 		optionapi.Name = categorysettings.Name
@@ -2909,7 +2909,7 @@ function mainapi:CreateGUI()
 		button.Position = UDim2.new(1, -29, 0, 7)
 		button.BackgroundTransparency = 1
 		button.AutoButtonColor = false
-		button.Image = getcustomasset('0lyzll/assets/new/overlaysicon.png')
+		button.Image = getcustomasset('DogVape/assets/new/overlaysicon.png')
 		button.ImageColor3 = color.Light(uipallet.Main, 0.37)
 		button.Parent = bar
 		addCorner(button, UDim.new(1, 0))
@@ -2936,7 +2936,7 @@ function mainapi:CreateGUI()
 		icon.Size = UDim2.fromOffset(14, 12)
 		icon.Position = UDim2.fromOffset(10, 13)
 		icon.BackgroundTransparency = 1
-		icon.Image = getcustomasset('0lyzll/assets/new/overlaystab.png')
+		icon.Image = getcustomasset('DogVape/assets/new/overlaystab.png')
 		icon.ImageColor3 = uipallet.Text
 		icon.Parent = window
 		local title = Instance.new('TextLabel')
@@ -3128,7 +3128,7 @@ function mainapi:CreateGUI()
 		arrow.Size = UDim2.fromOffset(4, 8)
 		arrow.Position = UDim2.new(1, -20, 0, 16)
 		arrow.BackgroundTransparency = 1
-		arrow.Image = getcustomasset('0lyzll/assets/new/expandright.png')
+		arrow.Image = getcustomasset('DogVape/assets/new/expandright.png')
 		arrow.ImageColor3 = color.Light(uipallet.Main, 0.37)
 		arrow.Parent = button
 		local settingspane = Instance.new('TextButton')
@@ -3155,7 +3155,7 @@ function mainapi:CreateGUI()
 		back.Size = UDim2.fromOffset(16, 16)
 		back.Position = UDim2.fromOffset(11, 13)
 		back.BackgroundTransparency = 1
-		back.Image = getcustomasset('0lyzll/assets/new/back.png')
+		back.Image = getcustomasset('DogVape/assets/new/back.png')
 		back.ImageColor3 = color.Light(uipallet.Main, 0.37)
 		back.Parent = settingspane
 		addCorner(settingspane)
@@ -3403,7 +3403,7 @@ function mainapi:CreateGUI()
 		preview.Size = UDim2.fromOffset(12, 12)
 		preview.Position = UDim2.new(1, -22, 0, 10)
 		preview.BackgroundTransparency = 1
-		preview.Image = getcustomasset('0lyzll/assets/new/colorpreview.png')
+		preview.Image = getcustomasset('DogVape/assets/new/colorpreview.png')
 		preview.ImageColor3 = Color3.fromHSV(optionapi.Hue, 1, 1)
 		preview.Parent = slider
 		local valuebox = Instance.new('TextBox')
@@ -3431,7 +3431,7 @@ function mainapi:CreateGUI()
 		expandicon.Size = UDim2.fromOffset(9, 5)
 		expandicon.Position = UDim2.fromOffset(4, 4)
 		expandicon.BackgroundTransparency = 1
-		expandicon.Image = getcustomasset('0lyzll/assets/new/expandicon.png')
+		expandicon.Image = getcustomasset('DogVape/assets/new/expandicon.png')
 		expandicon.ImageColor3 = color.Dark(uipallet.Text, 0.43)
 		expandicon.Parent = expandbutton
 		local rainbow = Instance.new('TextButton')
@@ -3444,24 +3444,24 @@ function mainapi:CreateGUI()
 		local rainbow1 = Instance.new('ImageLabel')
 		rainbow1.Size = UDim2.fromOffset(12, 12)
 		rainbow1.BackgroundTransparency = 1
-		rainbow1.Image = getcustomasset('0lyzll/assets/new/rainbow_1.png')
+		rainbow1.Image = getcustomasset('DogVape/assets/new/rainbow_1.png')
 		rainbow1.ImageColor3 = color.Light(uipallet.Main, 0.37)
 		rainbow1.Parent = rainbow
 		local rainbow2 = rainbow1:Clone()
-		rainbow2.Image = getcustomasset('0lyzll/assets/new/rainbow_2.png')
+		rainbow2.Image = getcustomasset('DogVape/assets/new/rainbow_2.png')
 		rainbow2.Parent = rainbow
 		local rainbow3 = rainbow1:Clone()
-		rainbow3.Image = getcustomasset('0lyzll/assets/new/rainbow_3.png')
+		rainbow3.Image = getcustomasset('DogVape/assets/new/rainbow_3.png')
 		rainbow3.Parent = rainbow
 		local rainbow4 = rainbow1:Clone()
-		rainbow4.Image = getcustomasset('0lyzll/assets/new/rainbow_4.png')
+		rainbow4.Image = getcustomasset('DogVape/assets/new/rainbow_4.png')
 		rainbow4.Parent = rainbow
 		local knob = Instance.new('ImageLabel')
 		knob.Name = 'Knob'
 		knob.Size = UDim2.fromOffset(26, 12)
 		knob.Position = UDim2.fromOffset(slidercolorpos[4] - 3, -5)
 		knob.BackgroundTransparency = 1
-		knob.Image = getcustomasset('0lyzll/assets/new/guislider.png')
+		knob.Image = getcustomasset('DogVape/assets/new/guislider.png')
 		knob.ImageColor3 = slidercolors[4]
 		knob.Parent = holder
 		optionsettings.Function = optionsettings.Function or function() end
@@ -3478,8 +3478,8 @@ function mainapi:CreateGUI()
 			ColorSequenceKeypoint.new(0, Color3.fromHSV(0, 0, 0)),
 			ColorSequenceKeypoint.new(1, Color3.fromHSV(optionapi.Hue, optionapi.Sat, 1))
 		}))
-		local normalknob = getcustomasset('0lyzll/assets/new/guislider.png')
-		local rainbowknob = getcustomasset('0lyzll/assets/new/guisliderrain.png')
+		local normalknob = getcustomasset('DogVape/assets/new/guislider.png')
+		local rainbowknob = getcustomasset('DogVape/assets/new/guisliderrain.png')
 		local rainbowthread
 
 		function optionapi:Save(tab)
@@ -3814,7 +3814,7 @@ function mainapi:CreateCategory(categorysettings)
 	arrow.Size = UDim2.fromOffset(9, 4)
 	arrow.Position = UDim2.fromOffset(20, 18)
 	arrow.BackgroundTransparency = 1
-	arrow.Image = getcustomasset('0lyzll/assets/new/expandup.png')
+	arrow.Image = getcustomasset('DogVape/assets/new/expandup.png')
 	arrow.ImageColor3 = Color3.fromRGB(140, 140, 140)
 	arrow.Rotation = 180
 	arrow.Parent = arrowbutton
@@ -3947,7 +3947,7 @@ function mainapi:CreateCategory(categorysettings)
 		bindicon.Size = UDim2.fromOffset(12, 12)
 		bindicon.Position = UDim2.new(0.5, -6, 0, 5)
 		bindicon.BackgroundTransparency = 1
-		bindicon.Image = getcustomasset('0lyzll/assets/new/bind.png')
+		bindicon.Image = getcustomasset('DogVape/assets/new/bind.png')
 		bindicon.ImageColor3 = color.Dark(uipallet.Text, 0.43)
 		bindicon.Parent = bind
 		local bindtext = Instance.new('TextLabel')
@@ -3965,7 +3965,7 @@ function mainapi:CreateCategory(categorysettings)
 		bindcover.Size = UDim2.fromOffset(154, 40)
 		bindcover.BackgroundTransparency = 1
 		bindcover.Visible = false
-		bindcover.Image = getcustomasset('0lyzll/assets/new/bindbkg.png')
+		bindcover.Image = getcustomasset('DogVape/assets/new/bindbkg.png')
 		bindcover.ScaleType = Enum.ScaleType.Slice
 		bindcover.SliceCenter = Rect.new(0, 0, 141, 40)
 		bindcover.Parent = modulebutton
@@ -3991,7 +3991,7 @@ function mainapi:CreateCategory(categorysettings)
 		dots.Size = UDim2.fromOffset(3, 16)
 		dots.Position = UDim2.fromOffset(4, 12)
 		dots.BackgroundTransparency = 1
-		dots.Image = getcustomasset('0lyzll/assets/new/dots.png')
+		dots.Image = getcustomasset('DogVape/assets/new/dots.png')
 		dots.ImageColor3 = color.Light(uipallet.Main, 0.37)
 		dots.Parent = dotsbutton
 		modulechildren.Name = modulesettings.Name..'Children'
@@ -4079,13 +4079,13 @@ function mainapi:CreateCategory(categorysettings)
 		bind.MouseEnter:Connect(function()
 			bindtext.Visible = false
 			bindicon.Visible = not bindtext.Visible
-			bindicon.Image = getcustomasset('0lyzll/assets/new/edit.png')
+			bindicon.Image = getcustomasset('DogVape/assets/new/edit.png')
 			if not moduleapi.Enabled then bindicon.ImageColor3 = color.Dark(uipallet.Text, 0.16) end
 		end)
 		bind.MouseLeave:Connect(function()
 			bindtext.Visible = #moduleapi.Bind > 0
 			bindicon.Visible = not bindtext.Visible
-			bindicon.Image = getcustomasset('0lyzll/assets/new/bind.png')
+			bindicon.Image = getcustomasset('DogVape/assets/new/bind.png')
 			if not moduleapi.Enabled then
 				bindicon.ImageColor3 = color.Dark(uipallet.Text, 0.43)
 			end
@@ -4327,7 +4327,7 @@ function mainapi:CreateOverlay(categorysettings)
 	pin.Position = UDim2.new(1, -47, 0, 12)
 	pin.BackgroundTransparency = 1
 	pin.AutoButtonColor = false
-	pin.Image = getcustomasset('0lyzll/assets/new/pin.png')
+	pin.Image = getcustomasset('DogVape/assets/new/pin.png')
 	pin.ImageColor3 = color.Dark(uipallet.Text, 0.43)
 	pin.Parent = window
 	local dotsbutton = Instance.new('TextButton')
@@ -4342,7 +4342,7 @@ function mainapi:CreateOverlay(categorysettings)
 	dots.Size = UDim2.fromOffset(3, 16)
 	dots.Position = UDim2.fromOffset(4, 12)
 	dots.BackgroundTransparency = 1
-	dots.Image = getcustomasset('0lyzll/assets/new/dots.png')
+	dots.Image = getcustomasset('DogVape/assets/new/dots.png')
 	dots.ImageColor3 = color.Light(uipallet.Main, 0.37)
 	dots.Parent = dotsbutton
 	local customchildren = Instance.new('Frame')
@@ -4459,7 +4459,7 @@ function mainapi:CreateOverlay(categorysettings)
 end
 
 local function buildProfileSavePath(profileName)
-	return '0lyzll/profiles/'..tostring(profileName or mainapi.Profile or 'default')..mainapi.Place..'.txt'
+	return 'DogVape/profiles/'..tostring(profileName or mainapi.Profile or 'default')..mainapi.Place..'.txt'
 end
 
 local function exportProfileJson(profileName)
@@ -4540,7 +4540,7 @@ local function importProfileFromText(rawText, profileNameHint)
 		index += 1
 	end
 
-	writefile('0lyzll/profiles/'..uniqueName..mainapi.Place..'.txt', freshText)
+	writefile('DogVape/profiles/'..uniqueName..mainapi.Place..'.txt', freshText)
 	mainapi.Profiles = mainapi.Profiles or {}
 	local hasProfile = false
 	for _, v in mainapi.Profiles do
@@ -4609,7 +4609,7 @@ function mainapi:CreateCategoryList(categorysettings)
 	arrow.Size = UDim2.fromOffset(9, 4)
 	arrow.Position = UDim2.fromOffset(20, 19)
 	arrow.BackgroundTransparency = 1
-	arrow.Image = getcustomasset('0lyzll/assets/new/expandup.png')
+	arrow.Image = getcustomasset('DogVape/assets/new/expandup.png')
 	arrow.ImageColor3 = Color3.fromRGB(140, 140, 140)
 	arrow.Rotation = 180
 	arrow.Parent = arrowbutton
@@ -4636,7 +4636,7 @@ function mainapi:CreateCategoryList(categorysettings)
 	settings.Position = UDim2.new(1, -52, 0, 13)
 	settings.BackgroundTransparency = 1
 	settings.AutoButtonColor = false
-	settings.Image = getcustomasset('0lyzll/assets/new/customsettings.png')
+	settings.Image = getcustomasset('DogVape/assets/new/customsettings.png')
 	settings.ImageColor3 = color.Dark(uipallet.Text, 0.43)
 	settings.Parent = window
 	local divider = Instance.new('Frame')
@@ -4692,7 +4692,7 @@ function mainapi:CreateCategoryList(categorysettings)
 	addbutton.Size = UDim2.fromOffset(14, 14)
 	addbutton.Position = UDim2.new(1, -20, 0, 8)
 	addbutton.BackgroundTransparency = 1
-	addbutton.Image = getcustomasset('0lyzll/assets/new/add.png')
+	addbutton.Image = getcustomasset('DogVape/assets/new/add.png')
 	addbutton.ImageColor3 = categorysettings.Color
 	addbutton.ImageTransparency = 0.3
 	addbutton.Parent = addbkg
@@ -4746,8 +4746,8 @@ function mainapi:CreateCategoryList(categorysettings)
 				if ind then
 					if val ~= 'default' then
 						table.remove(mainapi.Profiles, ind)
-						if isfile('0lyzll/profiles/'..val..mainapi.Place..'.txt') and delfile then
-							delfile('0lyzll/profiles/'..val..mainapi.Place..'.txt')
+						if isfile('DogVape/profiles/'..val..mainapi.Place..'.txt') and delfile then
+							delfile('DogVape/profiles/'..val..mainapi.Place..'.txt')
 						end
 					end
 				else
@@ -4814,7 +4814,7 @@ function mainapi:CreateCategoryList(categorysettings)
 				dots.Size = UDim2.fromOffset(3, 16)
 				dots.Position = UDim2.fromOffset(10, 10)
 				dots.BackgroundTransparency = 1
-				dots.Image = getcustomasset('0lyzll/assets/new/dots.png')
+				dots.Image = getcustomasset('DogVape/assets/new/dots.png')
 				dots.ImageColor3 = isCurrentProfile and Color3.fromRGB(60, 60, 60) or color.Light(uipallet.Main, 0.37)
 				dots.Parent = dotsbutton
 				local bind = Instance.new('TextButton')
@@ -4835,7 +4835,7 @@ function mainapi:CreateCategoryList(categorysettings)
 				bindicon.Size = UDim2.fromOffset(12, 12)
 				bindicon.Position = UDim2.new(0.5, -6, 0, 5)
 				bindicon.BackgroundTransparency = 1
-				bindicon.Image = getcustomasset('0lyzll/assets/new/bind.png')
+				bindicon.Image = getcustomasset('DogVape/assets/new/bind.png')
 				bindicon.ImageColor3 = isCurrentProfile and Color3.fromRGB(60, 60, 60) or color.Dark(uipallet.Text, 0.43)
 				bindicon.Parent = bind
 				local bindtext = Instance.new('TextLabel')
@@ -4852,7 +4852,7 @@ function mainapi:CreateCategoryList(categorysettings)
 				bind.MouseEnter:Connect(function()
 					bindtext.Visible = false
 					bindicon.Visible = not bindtext.Visible
-					bindicon.Image = getcustomasset('0lyzll/assets/new/edit.png')
+					bindicon.Image = getcustomasset('DogVape/assets/new/edit.png')
 					if v.Name ~= mainapi.Profile then
 						bindicon.ImageColor3 = color.Dark(uipallet.Text, 0.16)
 					end
@@ -4860,7 +4860,7 @@ function mainapi:CreateCategoryList(categorysettings)
 				bind.MouseLeave:Connect(function()
 					bindtext.Visible = #v.Bind > 0
 					bindicon.Visible = not bindtext.Visible
-					bindicon.Image = getcustomasset('0lyzll/assets/new/bind.png')
+					bindicon.Image = getcustomasset('DogVape/assets/new/bind.png')
 					if v.Name ~= mainapi.Profile then
 						bindicon.ImageColor3 = color.Dark(uipallet.Text, 0.43)
 					end
@@ -4870,7 +4870,7 @@ function mainapi:CreateCategoryList(categorysettings)
 				bindcover.Size = UDim2.fromOffset(154, 33)
 				bindcover.BackgroundTransparency = 1
 				bindcover.Visible = false
-				bindcover.Image = getcustomasset('0lyzll/assets/new/bindbkg.png')
+				bindcover.Image = getcustomasset('DogVape/assets/new/bindbkg.png')
 				bindcover.ScaleType = Enum.ScaleType.Slice
 				bindcover.SliceCenter = Rect.new(0, 0, 141, 40)
 				bindcover.Parent = object
@@ -5003,7 +5003,7 @@ function mainapi:CreateCategoryList(categorysettings)
 				close.BackgroundColor3 = Color3.new(1, 1, 1)
 				close.BackgroundTransparency = 1
 				close.AutoButtonColor = false
-				close.Image = getcustomasset('0lyzll/assets/new/closemini.png')
+				close.Image = getcustomasset('DogVape/assets/new/closemini.png')
 				close.ImageColor3 = color.Light(uipallet.Text, 0.2)
 				close.ImageTransparency = 0.5
 				close.Parent = object
@@ -5082,9 +5082,9 @@ function mainapi:CreateCategoryList(categorysettings)
 					categoryapi:ChangeValue()
 					mainapi:Save(profileName)
 					mainapi:Load(true, profileName)
-					mainapi:CreateNotification('0LYZLL', 'Loaded profile: '..profileName, 4, 'info')
+					mainapi:CreateNotification('DogVape', 'Loaded profile: '..profileName, 4, 'info')
 				else
-					mainapi:CreateNotification('0LYZLL', profileName or 'Failed to import JSON profile.', 5, 'alert')
+					mainapi:CreateNotification('DogVape', profileName or 'Failed to import JSON profile.', 5, 'alert')
 				end
 			else
 				if not categoryapi:GetValue(text) then
@@ -5092,7 +5092,7 @@ function mainapi:CreateCategoryList(categorysettings)
 					mainapi:Save()
 					addvalue.Text = ''
 				else
-					mainapi:CreateNotification('0LYZLL', 'Profile "'..text..'" already exists.', 4, 'alert')
+					mainapi:CreateNotification('DogVape', 'Profile "'..text..'" already exists.', 4, 'alert')
 				end
 			end
 		else
@@ -5214,7 +5214,7 @@ function mainapi:CreateSearch()
 	searchicon.Size = UDim2.fromOffset(14, 14)
 	searchicon.Position = UDim2.new(1, -23, 0, 11)
 	searchicon.BackgroundTransparency = 1
-	searchicon.Image = getcustomasset('0lyzll/assets/new/search.png')
+	searchicon.Image = getcustomasset('DogVape/assets/new/search.png')
 	searchicon.ImageColor3 = color.Light(uipallet.Main, 0.37)
 	searchicon.Parent = searchbkg
 	local legiticon = Instance.new('ImageButton')
@@ -5222,7 +5222,7 @@ function mainapi:CreateSearch()
 	legiticon.Size = UDim2.fromOffset(29, 16)
 	legiticon.Position = UDim2.fromOffset(8, 11)
 	legiticon.BackgroundTransparency = 1
-	legiticon.Image = getcustomasset('0lyzll/assets/new/legit.png')
+	legiticon.Image = getcustomasset('DogVape/assets/new/legit.png')
 	legiticon.Parent = searchbkg
 	local legitdivider = Instance.new('Frame')
 	legitdivider.Name = 'LegitDivider'
@@ -5359,7 +5359,7 @@ function mainapi:CreateLegit()
 	icon.Size = UDim2.fromOffset(16, 16)
 	icon.Position = UDim2.fromOffset(18, 13)
 	icon.BackgroundTransparency = 1
-	icon.Image = getcustomasset('0lyzll/assets/new/legittab.png')
+	icon.Image = getcustomasset('DogVape/assets/new/legittab.png')
 	icon.ImageColor3 = uipallet.Text
 	icon.Parent = window
 	local close = addCloseButton(window)
@@ -5434,7 +5434,7 @@ function mainapi:CreateLegit()
 		dots.Size = UDim2.fromOffset(2, 12)
 		dots.Position = UDim2.fromOffset(6, 6)
 		dots.BackgroundTransparency = 1
-		dots.Image = getcustomasset('0lyzll/assets/new/dots.png')
+		dots.Image = getcustomasset('DogVape/assets/new/dots.png')
 		dots.ImageColor3 = color.Light(uipallet.Main, 0.37)
 		dots.Parent = dotsbutton
 		local shadow = Instance.new('TextButton')
@@ -5471,7 +5471,7 @@ function mainapi:CreateLegit()
 		back.Size = UDim2.fromOffset(16, 16)
 		back.Position = UDim2.fromOffset(11, 13)
 		back.BackgroundTransparency = 1
-		back.Image = getcustomasset('0lyzll/assets/new/back.png')
+		back.Image = getcustomasset('DogVape/assets/new/back.png')
 		back.ImageColor3 = color.Light(uipallet.Main, 0.37)
 		back.Parent = settingspane
 		addCorner(settingspane)
@@ -5683,10 +5683,10 @@ local function formatNotes(text)
 	return table.concat(lines, '\n')
 end
 
-local presetPromptFile = '0lyzll/profiles/presetprompt.txt'
+local presetPromptFile = 'DogVape/profiles/presetprompt.txt'
 
 local function getCommit()
-	return isfile('0lyzll/profiles/commit.txt') and readfile('0lyzll/profiles/commit.txt') or nil
+	return isfile('DogVape/profiles/commit.txt') and readfile('DogVape/profiles/commit.txt') or nil
 end
 
 local function dismissedPresets()
@@ -5697,7 +5697,7 @@ end
 local function shouldOfferPresets()
 	if shared.VapePresetInstall or shared.updated then return true end
 
-	local suc, files = pcall(listfiles, '0lyzll/profiles')
+	local suc, files = pcall(listfiles, 'DogVape/profiles')
 	return suc and #files < 4
 end
 
@@ -5709,7 +5709,7 @@ local function installPresets()
 	end
 
 	local suc, req = pcall(request, {
-		Url = 'https://api.github.com/repos/0lyzll/0lyzll/contents/profiles',
+		Url = 'https://api.github.com/repos/0lyzll/DogVape/contents/profiles',
 		Method = 'GET'
 	})
 	if not suc or not req or req.StatusCode ~= 200 then return false end
@@ -5725,10 +5725,10 @@ local function installPresets()
 		if v.type == 'file' then
 			local path = ({v.path:gsub(' ', '%%20')})[1]
 			local got, res = pcall(function()
-				return game:HttpGet(`https://raw.githubusercontent.com/0lyzll/0lyzll/{commit}/{path}`, true)
+				return game:HttpGet(`https://raw.githubusercontent.com/0lyzll/DogVape/{commit}/{path}`, true)
 			end)
 			if got and type(res) == 'string' and res ~= '' and res ~= '404: Not Found' then
-				writefile(`0lyzll/{path}`, res)
+				writefile(`DogVape/{path}`, res)
 				installed = true
 			end
 		end
@@ -5749,7 +5749,7 @@ function mainapi:PromptPresets()
 		Function = function(result)
 			if result == 'dismiss' then
 				pcall(writefile, presetPromptFile, getCommit() or 'main')
-				self:CreateNotification('0LYZLL', 'Preset configs wont be offered again until the next update.', 8)
+				self:CreateNotification('DogVape', 'Preset configs wont be offered again until the next update.', 8)
 				return
 			end
 			if not result then return end
@@ -5759,13 +5759,13 @@ function mainapi:PromptPresets()
 
 				if not installPresets() then
 					self.Loaded = loaded
-					self:CreateNotification('0LYZLL', 'Failed to download preset configs.', 8, 'alert')
+					self:CreateNotification('DogVape', 'Failed to download preset configs.', 8, 'alert')
 					return
 				end
 
 				table.clear(self.SaveCache)
 				self:Load(true)
-				self:CreateNotification('0LYZLL', `Loaded the preset config for {self.Profile}`, 8)
+				self:CreateNotification('DogVape', `Loaded the preset config for {self.Profile}`, 8)
 			end)
 		end
 	})
@@ -5883,7 +5883,7 @@ function mainapi:CreateChangelogs()
 		local added = features and type(features.added) == 'table' and features.added or {}
 		local updated = features and type(features.updated) == 'table' and features.updated or {}
 		local text = features and type(features.text) == 'string' and features.text or ''
-		local commit = isfile('0lyzll/profiles/commit.txt') and readfile('0lyzll/profiles/commit.txt'):sub(1, 7) or ''
+		local commit = isfile('DogVape/profiles/commit.txt') and readfile('DogVape/profiles/commit.txt'):sub(1, 7) or ''
 
 		graphemes = utf8.len(text) or #text
 		body.Text = text ~= '' and formatNotes(text) or ''
@@ -5942,7 +5942,7 @@ function mainapi:CreateChangelogs()
 			if empty.Visible then return end
 
 			changelogapi:Open()
-			self:CreateNotification('0LYZLL', `Script updated from {shared.updated:sub(1, 7)}, here is what changed`, 10, 'info')
+			self:CreateNotification('DogVape', `Script updated from {shared.updated:sub(1, 7)}, here is what changed`, 10, 'info')
 		end
 
 		local pending
@@ -5977,7 +5977,7 @@ function mainapi:CreateNotification(title, text, duration, type)
 		notification.Position = UDim2.new(1, 0, 1, -(29 + (78 * i)))
 		notification.ZIndex = 5
 		notification.BackgroundTransparency = 1
-		notification.Image = getcustomasset('0lyzll/assets/new/notification.png')
+		notification.Image = getcustomasset('DogVape/assets/new/notification.png')
 		notification.ScaleType = Enum.ScaleType.Slice
 		notification.SliceCenter = Rect.new(7, 7, 9, 9)
 		notification.Parent = notifications
@@ -5988,7 +5988,7 @@ function mainapi:CreateNotification(title, text, duration, type)
 		iconshadow.Position = UDim2.fromOffset(-5, -8)
 		iconshadow.ZIndex = 5
 		iconshadow.BackgroundTransparency = 1
-		iconshadow.Image = getcustomasset('0lyzll/assets/new/'..(type or 'info')..'.png')
+		iconshadow.Image = getcustomasset('DogVape/assets/new/'..(type or 'info')..'.png')
 		iconshadow.ImageColor3 = Color3.new()
 		iconshadow.ImageTransparency = 0.5
 		iconshadow.Parent = notification
@@ -6087,7 +6087,7 @@ function mainapi:CreatePrompt(promptsettings)
 	icon.Position = UDim2.fromOffset(20, 20)
 	icon.ZIndex = 12
 	icon.BackgroundTransparency = 1
-	icon.Image = getcustomasset('0lyzll/assets/new/'..(promptsettings.Icon or 'vape')..'.png')
+	icon.Image = getcustomasset('DogVape/assets/new/'..(promptsettings.Icon or 'vape')..'.png')
 	icon.ImageColor3 = promptsettings.Icon and uipallet.Text or Color3.new(1, 1, 1)
 	icon.Parent = window
 	local title = Instance.new('TextLabel')
@@ -6196,11 +6196,11 @@ function mainapi:Load(skipgui, profile)
 	local savecheck = true
 	local savenew
 
-	if isfile('0lyzll/profiles/'..game.GameId..'.gui.txt') then
-		guidata = loadJson('0lyzll/profiles/'..game.GameId..'.gui.txt')
+	if isfile('DogVape/profiles/'..game.GameId..'.gui.txt') then
+		guidata = loadJson('DogVape/profiles/'..game.GameId..'.gui.txt')
 		if not guidata then
 			guidata = {Categories = {}}
-			self:CreateNotification('0LYZLL', 'Failed to load GUI settings.', 10, 'alert')
+			self:CreateNotification('DogVape', 'Failed to load GUI settings.', 10, 'alert')
 			savecheck = false
 		end
 
@@ -6246,11 +6246,11 @@ function mainapi:Load(skipgui, profile)
 		self.ProfileLabel.Size = UDim2.fromOffset(getfontsize(self.ProfileLabel.Text, self.ProfileLabel.TextSize, self.ProfileLabel.Font).X + 16, 24)
 	end
 
-	if isfile('0lyzll/profiles/'..self.Profile..self.Place..'.txt') then
-		local savedata = loadJson('0lyzll/profiles/'..self.Profile..self.Place..'.txt')
+	if isfile('DogVape/profiles/'..self.Profile..self.Place..'.txt') then
+		local savedata = loadJson('DogVape/profiles/'..self.Profile..self.Place..'.txt')
 		if not savedata then
 			savedata = {Categories = {}, Modules = {}, Legit = {}}
-			self:CreateNotification('0LYZLL', 'Failed to load '..self.Profile..' profile.', 10, 'alert')
+			self:CreateNotification('DogVape', 'Failed to load '..self.Profile..' profile.', 10, 'alert')
 			savecheck = false
 		end
 
@@ -6351,7 +6351,7 @@ function mainapi:Load(skipgui, profile)
 	end
 
 	if not inputService.KeyboardEnabled or shared.VapeDeveloper then
-		local hide = isfile('0lyzll/profiles/hide.txt') and readfile('0lyzll/profiles/hide.txt') or nil
+		local hide = isfile('DogVape/profiles/hide.txt') and readfile('DogVape/profiles/hide.txt') or nil
 		if hide ~= nil then
 			hide = hide == 'true' and true or false
 		end
@@ -6372,7 +6372,7 @@ function mainapi:Load(skipgui, profile)
 		image.Size = UDim2.fromOffset(22, 22)
 		image.Position = UDim2.fromScale(0.5, 0.5)
 		image.BackgroundTransparency = 1
-		image.Image = getcustomasset('0lyzll/assets/new/vape.png')
+		image.Image = getcustomasset('DogVape/assets/new/vape.png')
 		image.ImageTransparency = hide and 1 or 0
 		image.Parent = button
 		local buttoncorner = Instance.new('UICorner')
@@ -6479,8 +6479,8 @@ function mainapi:Save(newprofile)
 		end
 	end
 
-	writeSave('0lyzll/profiles/'..game.GameId..'.gui.txt', httpService:JSONEncode(guidata))
-	writeSave('0lyzll/profiles/'..self.Profile..self.Place..'.txt', httpService:JSONEncode(savedata))
+	writeSave('DogVape/profiles/'..game.GameId..'.gui.txt', httpService:JSONEncode(guidata))
+	writeSave('DogVape/profiles/'..self.Profile..self.Place..'.txt', httpService:JSONEncode(savedata))
 end
 
 function mainapi:QueueSave()
@@ -6579,7 +6579,7 @@ local scarcitybanner = Instance.new('TextLabel')
 scarcitybanner.Size = UDim2.fromScale(1, 0.02)
 scarcitybanner.Position = UDim2.fromScale(0, 0.97)
 scarcitybanner.BackgroundTransparency = 1
-scarcitybanner.Text = 'Join the 0lyzll dicord server.'
+scarcitybanner.Text = 'Join the DogVape dicord server.'
 scarcitybanner.TextScaled = true
 scarcitybanner.TextColor3 = Color3.new(1, 1, 1)
 scarcitybanner.TextStrokeTransparency = 0.5
@@ -6676,47 +6676,47 @@ mainapi:CreateGUI()
 mainapi.Categories.Main:CreateDivider()
 mainapi:CreateCategory({
 	Name = 'Combat',
-	Icon = getcustomasset('0lyzll/assets/new/combaticon.png'),
+	Icon = getcustomasset('DogVape/assets/new/combaticon.png'),
 	Size = UDim2.fromOffset(13, 14)
 })
 mainapi:CreateCategory({
 	Name = 'Blatant',
-	Icon = getcustomasset('0lyzll/assets/new/blatanticon.png'),
+	Icon = getcustomasset('DogVape/assets/new/blatanticon.png'),
 	Size = UDim2.fromOffset(14, 14)
 })
 mainapi:CreateCategory({
 	Name = 'Render',
-	Icon = getcustomasset('0lyzll/assets/new/rendericon.png'),
+	Icon = getcustomasset('DogVape/assets/new/rendericon.png'),
 	Size = UDim2.fromOffset(15, 14)
 })
 mainapi:CreateCategory({
 	Name = 'Utility',
-	Icon = getcustomasset('0lyzll/assets/new/utilityicon.png'),
+	Icon = getcustomasset('DogVape/assets/new/utilityicon.png'),
 	Size = UDim2.fromOffset(15, 14)
 })
 mainapi:CreateCategory({
 	Name = 'World',
-	Icon = getcustomasset('0lyzll/assets/new/worldicon.png'),
+	Icon = getcustomasset('DogVape/assets/new/worldicon.png'),
 	Size = UDim2.fromOffset(14, 14)
 })
 mainapi:CreateCategory({
 	Name = 'Inventory',
-	Icon = getcustomasset('0lyzll/assets/new/inventoryicon.png'),
+	Icon = getcustomasset('DogVape/assets/new/inventoryicon.png'),
 	Size = UDim2.fromOffset(15, 14)
 })
 mainapi:CreateCategory({
 	Name = 'Minigames',
-	Icon = getcustomasset('0lyzll/assets/new/miniicon.png'),
+	Icon = getcustomasset('DogVape/assets/new/miniicon.png'),
 	Size = UDim2.fromOffset(19, 12)
 })
 mainapi:CreateCategory({
 	Name = 'Kits',
-	Icon = getcustomasset('0lyzll/assets/new/miniicon.png'),
+	Icon = getcustomasset('DogVape/assets/new/miniicon.png'),
 	Size = UDim2.fromOffset(19, 12)
 })
 mainapi:CreateCategory({
 	Name = 'KitSpy',
-	Icon = getcustomasset('0lyzll/assets/new/combaticon.png'),
+	Icon = getcustomasset('DogVape/assets/new/combaticon.png'),
 	Size = UDim2.fromOffset(15, 14)
 })
 mainapi.Categories.Main:CreateDivider('misc')
@@ -6732,7 +6732,7 @@ local friendscolor = {
 }
 local friendssettings = {
 	Name = 'Friends',
-	Icon = getcustomasset('0lyzll/assets/new/friendstab.png'),
+	Icon = getcustomasset('DogVape/assets/new/friendstab.png'),
 	Size = UDim2.fromOffset(17, 16),
 	Placeholder = 'Roblox username',
 	Color = Color3.fromRGB(5, 134, 105),
@@ -6787,7 +6787,7 @@ local createPublicProfilesWindow
 
 local Profiles = mainapi:CreateCategoryList({
 	Name = 'Profiles',
-	Icon = getcustomasset('0lyzll/assets/new/profilesicon.png'),
+	Icon = getcustomasset('DogVape/assets/new/profilesicon.png'),
 	Size = UDim2.fromOffset(17, 10),
 	Position = UDim2.fromOffset(12, 16),
 	Placeholder = 'Type name',
@@ -6805,8 +6805,8 @@ Profiles:CreateButton({
 		local profile = mainapi.Profile
 		mainapi:Save()
 
-		local current = '0lyzll/profiles/'..profile..mainapi.Place..'.txt'
-		local target = '0lyzll/profiles/default'..mainapi.Place..'.txt'
+		local current = 'DogVape/profiles/'..profile..mainapi.Place..'.txt'
+		local target = 'DogVape/profiles/default'..mainapi.Place..'.txt'
 		if profile ~= 'default' and isfile(current) then
 			local data = readfile(current)
 			mainapi.SaveCache[target] = data
@@ -6814,7 +6814,7 @@ Profiles:CreateButton({
 		end
 
 		mainapi:Load(true, 'default')
-		mainapi:CreateNotification('0LYZLL', `Synced "{profile}" to the default profile`, 5, 'info')
+		mainapi:CreateNotification('DogVape', `Synced "{profile}" to the default profile`, 5, 'info')
 	end
 })
 Profiles:CreateButton({
@@ -6822,17 +6822,17 @@ Profiles:CreateButton({
 	LayoutOrder = 7,
 	Function = function()
 		mainapi.Save = function() end
-		if isfile('0lyzll/profiles/'..mainapi.Profile..mainapi.Place..'.txt') and delfile then
-			delfile('0lyzll/profiles/'..mainapi.Profile..mainapi.Place..'.txt')
+		if isfile('DogVape/profiles/'..mainapi.Profile..mainapi.Place..'.txt') and delfile then
+			delfile('DogVape/profiles/'..mainapi.Profile..mainapi.Place..'.txt')
 		end
 		shared.vapereload = true
 		if shared.VapeDeveloper then
-			loadstring(readfile('0lyzll/init.lua'), 'init')(license)
+			loadstring(readfile('DogVape/init.lua'), 'init')(license)
 		else
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/0lyzll/0lyzll/'..readfile('0lyzll/profiles/commit.txt')..'/init.lua', true))(license)
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/0lyzll/DogVape/'..readfile('DogVape/profiles/commit.txt')..'/init.lua', true))(license)
 		end
 	end,
-	Tooltip = 'This will set your profile to the default settings of 0lyzll'
+	Tooltip = 'This will set your profile to the default settings of DogVape'
 })	
 
 -- Public Profiles Modal Window implementation
@@ -6866,7 +6866,7 @@ createPublicProfilesWindow = function()
 	logo.Size = UDim2.fromOffset(150, 50)
 	logo.Position = UDim2.fromOffset(-18, 2)
 	logo.BackgroundTransparency = 1
-	logo.Image = getcustomasset('0lyzll/assets/new/guivape.png')
+	logo.Image = getcustomasset('DogVape/assets/new/guivape.png')
 	logo.Parent = window
 
 	local logov4 = Instance.new('ImageLabel')
@@ -6874,7 +6874,7 @@ createPublicProfilesWindow = function()
 	logov4.Size = UDim2.fromOffset(240, 80)
 	logov4.Position = UDim2.fromOffset(15, -12)
 	logov4.BackgroundTransparency = 1
-	logov4.Image = getcustomasset('0lyzll/assets/new/guiv4.png')
+	logov4.Image = getcustomasset('DogVape/assets/new/guiv4.png')
 	logov4.ImageColor3 = Color3.fromHSV(mainapi.GUIColor.Hue, mainapi.GUIColor.Sat, mainapi.GUIColor.Value)
 	logov4.Parent = logo
 
@@ -6916,7 +6916,7 @@ createPublicProfilesWindow = function()
 	searchIcon.Size = UDim2.fromOffset(14, 14)
 	searchIcon.Position = UDim2.fromOffset(10, 9)
 	searchIcon.BackgroundTransparency = 1
-	searchIcon.Image = getcustomasset('0lyzll/assets/new/search.png')
+	searchIcon.Image = getcustomasset('DogVape/assets/new/search.png')
 	searchIcon.ImageColor3 = color.Light(uipallet.Main, 0.37)
 	searchIcon.Parent = searchFrame
 
@@ -7088,10 +7088,10 @@ createPublicProfilesWindow = function()
 					if ok then
 						mainapi:Save(profName)
 						mainapi:Load(true, profName)
-						mainapi:CreateNotification('0LYZLL', 'Successfully loaded profile: ' .. profName, 5, 'info')
+						mainapi:CreateNotification('DogVape', 'Successfully loaded profile: ' .. profName, 5, 'info')
 						window.Visible = false
 					else
-						mainapi:CreateNotification('0LYZLL', profName or 'Failed to load profile.', 5, 'alert')
+						mainapi:CreateNotification('DogVape', profName or 'Failed to load profile.', 5, 'alert')
 					end
 				end
 			end)
@@ -7143,7 +7143,7 @@ createPublicProfilesWindow = function()
 		local targetProfile = selectedUploadProfile or mainapi.Profile or 'default'
 		local exportData = exportProfileJson(targetProfile)
 		if not exportData then
-			mainapi:CreateNotification('0LYZLL', 'No profile data found for "' .. tostring(targetProfile) .. '".', 5, 'alert')
+			mainapi:CreateNotification('DogVape', 'No profile data found for "' .. tostring(targetProfile) .. '".', 5, 'alert')
 			return
 		end
 
@@ -7152,7 +7152,7 @@ createPublicProfilesWindow = function()
 			local taken, owner = publicconfigs.IsNameTaken(tostring(targetProfile))
 			local localPlayerName = (cloneref(game:GetService('Players')).LocalPlayer or {Name = "Anonymous"}).Name
 			if taken and owner and owner:lower() ~= localPlayerName:lower() then
-				mainapi:CreateNotification('0LYZLL', 'failed config name already used', 6, 'alert')
+				mainapi:CreateNotification('DogVape', 'failed config name already used', 6, 'alert')
 				return
 			end
 		end
@@ -7162,9 +7162,9 @@ createPublicProfilesWindow = function()
 			local ok, msg = publicconfigs.Upload(tostring(targetProfile), tostring(game.PlaceId), exportData)
 			if not ok then
 				if msg and (msg:lower():find('already taken') or msg:lower():find('already used') or msg:lower():find('taken')) then
-					mainapi:CreateNotification('0LYZLL', 'failed config name already used', 6, 'alert')
+					mainapi:CreateNotification('DogVape', 'failed config name already used', 6, 'alert')
 				else
-					mainapi:CreateNotification('0LYZLL', msg or 'failed config name already used', 6, 'alert')
+					mainapi:CreateNotification('DogVape', msg or 'failed config name already used', 6, 'alert')
 				end
 				return
 			end
@@ -7177,7 +7177,7 @@ createPublicProfilesWindow = function()
 		}
 		table.insert(localPublicProfilesList, 1, newEntry)
 
-		mainapi:CreateNotification('0LYZLL', 'Successfully published profile "' .. tostring(targetProfile) .. '"!', 5, 'info')
+		mainapi:CreateNotification('DogVape', 'Successfully published profile "' .. tostring(targetProfile) .. '"!', 5, 'info')
 		refreshPublicList()
 	end)
 
@@ -7191,7 +7191,7 @@ end
 local targets
 targets = mainapi:CreateCategoryList({
 	Name = 'Targets',
-	Icon = getcustomasset('0lyzll/assets/new/friendstab.png'),
+	Icon = getcustomasset('DogVape/assets/new/friendstab.png'),
 	Size = UDim2.fromOffset(17, 16),
 	Placeholder = 'Roblox username',
 	Function = function()
@@ -7220,13 +7220,13 @@ general:CreateButton({
 	Function = function()
 		local exportdata = exportProfileJson(mainapi.Profile)
 		if not exportdata then
-			mainapi:CreateNotification('0LYZLL', 'No profile data found to export.', 5, 'alert')
+			mainapi:CreateNotification('DogVape', 'No profile data found to export.', 5, 'alert')
 			return
 		end
 		if setclipboard then
 			setclipboard(exportdata)
 		end
-		mainapi:CreateNotification('0LYZLL', 'Current profile JSON copied to your clipboard.', 5, 'info')
+		mainapi:CreateNotification('DogVape', 'Current profile JSON copied to your clipboard.', 5, 'info')
 	end,
 	Tooltip = 'Copies your current profile config as JSON'
 })
@@ -7245,9 +7245,9 @@ general:CreateButton({
 		task.spawn(function()
 			task.wait(0.05)
 			if shared.VapeDeveloper then
-				loadstring(readfile('0lyzll/init.lua'), 'init')()
+				loadstring(readfile('DogVape/init.lua'), 'init')()
 			else
-				loadstring(game:HttpGet('https://raw.githubusercontent.com/0lyzll/0lyzll/'..readfile('0lyzll/profiles/commit.txt')..'/init.lua', true))()
+				loadstring(game:HttpGet('https://raw.githubusercontent.com/0lyzll/DogVape/'..readfile('DogVape/profiles/commit.txt')..'/init.lua', true))()
 			end
 		end)
 	end,
@@ -7318,14 +7318,14 @@ guipane:CreateToggle({
 if not inputService.KeyboardEnabled or shared.VapeDeveloper then
 	guipane:CreateToggle({
 		Name = 'Hide Vape Button',
-		Default = isfile('0lyzll/profiles/hide.txt') and readfile('0lyzll/profiles/hide.txt') == 'true' or false,
+		Default = isfile('DogVape/profiles/hide.txt') and readfile('DogVape/profiles/hide.txt') == 'true' or false,
 		Function = function(enabled)
 			local button = mainapi.VapeButton
 			if button then
 				button.BackgroundTransparency = enabled and 1 or 0.35
 				button.ImageLabel.ImageTransparency = enabled and 1 or 0
 			end
-			writefile('0lyzll/profiles/hide.txt', tostring(enabled))
+			writefile('DogVape/profiles/hide.txt', tostring(enabled))
 		end,
 		Tooltip = 'Hides the button that opens the GUI'
 	})
@@ -7374,12 +7374,12 @@ guipane:CreateDropdown({
 	List = inputService.TouchEnabled and {'new', 'old'} or {'new', 'old', 'rise'},
 	Function = function(val, mouse)
 		if mouse then
-			writefile('0lyzll/profiles/gui.txt', val)
+			writefile('DogVape/profiles/gui.txt', val)
 			shared.vapereload = true
 			if shared.VapeDeveloper then
-				loadstring(readfile('0lyzll/init.lua'), 'loader')()
+				loadstring(readfile('DogVape/init.lua'), 'loader')()
 			else
-				loadstring(game:HttpGet('https://raw.githubusercontent.com/0lyzll/0lyzll/'..readfile('0lyzll/profiles/commit.txt')..'/init.lua', true))()
+				loadstring(game:HttpGet('https://raw.githubusercontent.com/0lyzll/DogVape/'..readfile('DogVape/profiles/commit.txt')..'/init.lua', true))()
 			end
 		end
 	end,
@@ -7487,7 +7487,7 @@ mainapi.Categories.Main:CreateBind()
 
 local textgui = mainapi:CreateOverlay({
 	Name = 'Text GUI',
-	Icon = getcustomasset('0lyzll/assets/new/textguiicon.png'),
+	Icon = getcustomasset('DogVape/assets/new/textguiicon.png'),
 	Size = UDim2.fromOffset(16, 12),
 	Position = UDim2.fromOffset(12, 14),
 	Function = function()
@@ -7621,8 +7621,8 @@ local textguimodules = textgui:CreateToggle({
 textguimoduleslist = textgui:CreateTextList({
 	Name = 'Blacklist',
 	Tooltip = 'Name of module to hide.',
-	Icon = getcustomasset('0lyzll/assets/new/blockedicon.png'),
-	Tab = getcustomasset('0lyzll/assets/new/blockedtab.png'),
+	Icon = getcustomasset('DogVape/assets/new/blockedicon.png'),
+	Tab = getcustomasset('DogVape/assets/new/blockedtab.png'),
 	TabSize = UDim2.fromOffset(21, 16),
 	Color = Color3.fromRGB(250, 50, 56),
 	Function = function()
@@ -7699,7 +7699,7 @@ VapeLogo.BackgroundTransparency = 1
 VapeLogo.BorderSizePixel = 0
 VapeLogo.Visible = false
 VapeLogo.BackgroundColor3 = Color3.new()
-VapeLogo.Image = getcustomasset('0lyzll/assets/new/textvape.png')
+VapeLogo.Image = getcustomasset('DogVape/assets/new/textvape.png')
 VapeLogo.Parent = textgui.Children
 
 local lastside = textgui.Children.AbsolutePosition.X > (gui.AbsoluteSize.X / 2)
@@ -7721,7 +7721,7 @@ VapeLogoV4.Position = UDim2.new(1, 1, 0, 1)
 VapeLogoV4.BackgroundColor3 = Color3.new()
 VapeLogoV4.BackgroundTransparency = 1
 VapeLogoV4.BorderSizePixel = 0
-VapeLogoV4.Image = getcustomasset('0lyzll/assets/new/textv4.png')
+VapeLogoV4.Image = getcustomasset('DogVape/assets/new/textv4.png')
 VapeLogoV4.Parent = VapeLogo
 local VapeLogoShadow = VapeLogo:Clone()
 VapeLogoShadow.Position = UDim2.fromOffset(1, 1)
@@ -7793,7 +7793,7 @@ local targetinfobkg
 local targetinfofollow
 targetinfoobj = mainapi:CreateOverlay({
 	Name = 'Target Info',
-	Icon = getcustomasset('0lyzll/assets/new/targetinfoicon.png'),
+	Icon = getcustomasset('DogVape/assets/new/targetinfoicon.png'),
 	Size = UDim2.fromOffset(14, 14),
 	Position = UDim2.fromOffset(12, 14),
 	CategorySize = 240,
@@ -8024,14 +8024,14 @@ local TargetInfoHealthExtraCorner = Instance.new('UICorner')
 TargetInfoHealthExtraCorner.CornerRadius = UDim.new(0, 8)
 TargetInfoHealthExtraCorner.Parent = TargetInfoImage
 
-local TargetInfoHud = isfile('0lyzll/profiles/hud.txt') and readfile('0lyzll/profiles/hud.txt') or 'new'
+local TargetInfoHud = isfile('DogVape/profiles/hud.txt') and readfile('DogVape/profiles/hud.txt') or 'new'
 targetinfoobj:CreateDropdown({
 	Name = 'Gui Mode',
 	List = {'old', 'new'},
 	Default = 'new',
 	Function = function(val)
 		TargetInfoHud = val
-		writefile('0lyzll/profiles/hud.txt', val)
+		writefile('DogVape/profiles/hud.txt', val)
 		TargetInfoMainFrame.Visible = val == 'old'
 		handler.Visible = val == 'new'
 	end

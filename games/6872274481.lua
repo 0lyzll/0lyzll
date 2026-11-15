@@ -4,7 +4,7 @@
 local run = function(func)
 	local ok, err = pcall(func)
 	if not ok then
-		warn('[0lyzll] module failed to load: ' .. tostring(err))
+		warn('[DogVape] module failed to load: ' .. tostring(err))
 	end
 end
 local vapeEvents = setmetatable({}, {
@@ -161,7 +161,7 @@ setmetatable(remotes, {
 			task.delay(10, function()
 				if rawget(remotes, key) == nil then
 					pcall(function()
-						vape.Notify('[0lyzll] remote "' .. tostring(key) .. '" changed or removed some features may not work bru (dm @5qvx for fix)', 6)
+						vape.Notify('[DogVape] remote "' .. tostring(key) .. '" changed or removed some features may not work bru (dm @5qvx for fix)', 6)
 					end)
 				end
 			end)
@@ -177,7 +177,7 @@ local function addBlur(parent)
 	blur.Size = UDim2.new(1, 89, 1, 52)
 	blur.Position = UDim2.fromOffset(-48, -31)
 	blur.BackgroundTransparency = 1
-	blur.Image = getcustomasset('0lyzll/assets/new/blur.png')
+	blur.Image = getcustomasset('DogVape/assets/new/blur.png')
 	blur.ScaleType = Enum.ScaleType.Slice
 	blur.SliceCenter = Rect.new(52, 31, 261, 502)
 	blur.Parent = parent
@@ -1307,7 +1307,7 @@ run(function()
 
 		if remote == '' or remote == nil then
 			if not preDumped[i] then
-				notif('0lyzll', 'Failed to grab remote ('..tostring(i)..')', 10, 'alert')
+				notif('DogVape', 'Failed to grab remote ('..tostring(i)..')', 10, 'alert')
 			end
 			remote = preDumped[i] or ''
 		end
@@ -18016,18 +18016,18 @@ run(function()
 	end
 
 	local function cleanupVisuals()
-		destroyNamed(PlayerGui, "0lyzllKitRender")
-		destroyNamed(PlayerGui, "0lyzllKitIcon")
-		destroyNamed(PlayerGui, "0lyzllKitLevel")
-		destroyNamed(PlayerGui, "0lyzllLastKit")
-		destroyNamed(PlayerGui, "0lyzllMostUsedBadge")
-		destroyNamed(PlayerGui, "0lyzllHistoryList")
+		destroyNamed(PlayerGui, "DogVapeKitRender")
+		destroyNamed(PlayerGui, "DogVapeKitIcon")
+		destroyNamed(PlayerGui, "DogVapeKitLevel")
+		destroyNamed(PlayerGui, "DogVapeLastKit")
+		destroyNamed(PlayerGui, "DogVapeMostUsedBadge")
+		destroyNamed(PlayerGui, "DogVapeHistoryList")
 	end
 
 	local function cleanupHistoryVisuals()
-		destroyNamed(PlayerGui, "0lyzllLastKit")
-		destroyNamed(PlayerGui, "0lyzllMostUsedBadge")
-		destroyNamed(PlayerGui, "0lyzllHistoryList")
+		destroyNamed(PlayerGui, "DogVapeLastKit")
+		destroyNamed(PlayerGui, "DogVapeMostUsedBadge")
+		destroyNamed(PlayerGui, "DogVapeHistoryList")
 	end
 
 	local function extractHistory(payload)
@@ -18324,10 +18324,10 @@ run(function()
 		if not host or not host.Parent then return end
 		unclip(host)
 
-		local icon = host:FindFirstChild("0lyzllKitRender")
+		local icon = host:FindFirstChild("DogVapeKitRender")
 		if not icon then
 			icon = Instance.new("ImageLabel")
-			icon.Name = "0lyzllKitRender"
+			icon.Name = "DogVapeKitRender"
 			icon.AnchorPoint = Vector2.new(1, 0.5)
 			icon.Position = UDim2.new(1.05, 0, 0.5, 0)
 			icon.Size = UDim2.new(1.5, 0, 1.5, 0)
@@ -18360,10 +18360,10 @@ run(function()
 		if not nameLabel then return end
 		unclip(nameLabel)
 
-		local levelLabel = nameLabel:FindFirstChild("0lyzllKitLevel")
+		local levelLabel = nameLabel:FindFirstChild("DogVapeKitLevel")
 		if not levelLabel then
 			levelLabel = Instance.new("TextLabel")
-			levelLabel.Name = "0lyzllKitLevel"
+			levelLabel.Name = "DogVapeKitLevel"
 			levelLabel.AnchorPoint = Vector2.new(0, 0.5)
 			levelLabel.Position = UDim2.new(1, 5, 0.5, 0)
 			levelLabel.Size = UDim2.fromOffset(44, 15)
@@ -18389,7 +18389,7 @@ run(function()
 	-- 1. Single Most Used Badge UI
 	local function createSingleBadge(host, plr)
 		local badge = Instance.new("Frame")
-		badge.Name = "0lyzllMostUsedBadge"
+		badge.Name = "DogVapeMostUsedBadge"
 		badge:SetAttribute("UserId", plr.UserId)
 		badge.AnchorPoint = Vector2.new(0.5, 0.5)
 		badge.Position = UDim2.new(0.41, 0, 0.5, 0)
@@ -18451,7 +18451,7 @@ run(function()
 	-- 2. 2x Sized List All UI (48x48 icons, lower position Y = 0.6)
 	local function createHistoryList(host, plr)
 		local container = Instance.new("Frame")
-		container.Name = "0lyzllHistoryList"
+		container.Name = "DogVapeHistoryList"
 		container:SetAttribute("UserId", plr.UserId)
 		container.AnchorPoint = Vector2.new(0.5, 0.5)
 		container.Position = UDim2.new(0.41, 0, 0.6, 0) -- Moved lower down
@@ -18494,7 +18494,7 @@ run(function()
 	end
 
 	local function ensureMostUsedSingle(host, plr, cached)
-		local badge = host:FindFirstChild("0lyzllMostUsedBadge")
+		local badge = host:FindFirstChild("DogVapeMostUsedBadge")
 		if not badge then
 			badge = createSingleBadge(host, plr)
 		end
@@ -18524,7 +18524,7 @@ run(function()
 	end
 
 	local function ensureHistoryListAll(host, plr, cached)
-		local container = host:FindFirstChild("0lyzllHistoryList")
+		local container = host:FindFirstChild("DogVapeHistoryList")
 		if not container then
 			container = createHistoryList(host, plr)
 		end
@@ -18557,9 +18557,9 @@ run(function()
 
 		local mode = RenderMode.Value
 		if mode == "Single Most Used" then
-			destroyNamed(host, "0lyzllHistoryList")
+			destroyNamed(host, "DogVapeHistoryList")
 		elseif mode == "List All" then
-			destroyNamed(host, "0lyzllMostUsedBadge")
+			destroyNamed(host, "DogVapeMostUsedBadge")
 		end
 
 		local uid = plr.UserId
@@ -18719,7 +18719,7 @@ run(function()
 			elseif ct == 'unverified' then c.impossible += 1
 			else c.mod += 1 end
 		end
-		getgenv()._0lyzll_staffCounts = c
+		getgenv()._DogVape_staffCounts = c
 		vapeEvents.StaffCountUpdate:Fire()
 	end
 
@@ -23631,7 +23631,7 @@ run(function()
 		close.Position = UDim2.new(1, -35, 0, 9)
 		close.BackgroundColor3 = Color3.new(1, 1, 1)
 		close.BackgroundTransparency = 1
-		close.Image = getcustomasset('0lyzll/assets/new/close.png')
+		close.Image = getcustomasset('DogVape/assets/new/close.png')
 		close.ImageColor3 = color.Light(uipallet.Text, 0.2)
 		close.ImageTransparency = 0.5
 		close.AutoButtonColor = false
@@ -23746,7 +23746,7 @@ run(function()
 		searchicon.Size = UDim2.fromOffset(14, 14)
 		searchicon.Position = UDim2.new(1, -26, 0, 8)
 		searchicon.BackgroundTransparency = 1
-		searchicon.Image = getcustomasset('0lyzll/assets/new/search.png')
+		searchicon.Image = getcustomasset('DogVape/assets/new/search.png')
 		searchicon.ImageColor3 = color.Light(uipallet.Main, 0.37)
 		searchicon.Parent = searchbkg
 		local children = Instance.new('ScrollingFrame')
@@ -23887,7 +23887,7 @@ run(function()
 		textbuttonicon.Position = UDim2.fromScale(0.5, 0.5)
 		textbuttonicon.AnchorPoint = Vector2.new(0.5, 0.5)
 		textbuttonicon.BackgroundTransparency = 1
-		textbuttonicon.Image = getcustomasset('0lyzll/assets/new/add.png')
+		textbuttonicon.Image = getcustomasset('DogVape/assets/new/add.png')
 		textbuttonicon.ImageColor3 = Color3.fromHSV(0.46, 0.96, 0.52)
 		textbuttonicon.Parent = textbutton
 		local childrenlist = Instance.new('Frame')
@@ -23980,7 +23980,7 @@ run(function()
 			close.Position = UDim2.new(1, -23, 0, 6)
 			close.BackgroundColor3 = Color3.new(1, 1, 1)
 			close.BackgroundTransparency = 1
-			close.Image = getcustomasset('0lyzll/assets/new/closemini.png')
+			close.Image = getcustomasset('DogVape/assets/new/closemini.png')
 			close.ImageColor3 = color.Light(uipallet.Text, 0.2)
 			close.ImageTransparency = 0.5
 			close.AutoButtonColor = false

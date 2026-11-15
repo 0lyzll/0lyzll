@@ -8,16 +8,16 @@ getgenv().AutoReinjectEnabled = true
 
 -- AUTO UPDATE LOGIC
 local function getLatestCommit()
-	if shared._0lyzllChecked then
-		return readfile("0lyzll/profiles/commit.txt")
+	if shared._DogVapeChecked then
+		return readfile("DogVape/profiles/commit.txt")
 	end
 	local suc, res = pcall(function()
-		return game:HttpGet("https://api.github.com/repos/0lyzll/0lyzll/commits/main")
+		return game:HttpGet("https://api.github.com/repos/0lyzll/DogVape/commits/main")
 	end)
 	if suc and res then
 		local sha = res:match('"sha":"(.-)"')
 		if sha then 
-			shared._0lyzllChecked = true
+			shared._DogVapeChecked = true
 			return sha 
 		end
 	end
@@ -27,8 +27,8 @@ end
 local function handleUpdates()
 	local latestCommit = getLatestCommit()
 	local currentCommit = ""
-	if isfile("0lyzll/profiles/commit.txt") then
-		currentCommit = readfile("0lyzll/profiles/commit.txt")
+	if isfile("DogVape/profiles/commit.txt") then
+		currentCommit = readfile("DogVape/profiles/commit.txt")
 	end
 	
 	if latestCommit ~= "main" and latestCommit ~= currentCommit then
@@ -42,12 +42,12 @@ local function handleUpdates()
 				end
 			end
 		end
-		clearFolder("0lyzll/guis")
-		clearFolder("0lyzll/games")
-		clearFolder("0lyzll/libraries")
+		clearFolder("DogVape/guis")
+		clearFolder("DogVape/games")
+		clearFolder("DogVape/libraries")
 		
-		if not isfolder("0lyzll/profiles") then makefolder("0lyzll/profiles") end
-		writefile("0lyzll/profiles/commit.txt", latestCommit)
+		if not isfolder("DogVape/profiles") then makefolder("DogVape/profiles") end
+		writefile("DogVape/profiles/commit.txt", latestCommit)
 		
 		-- Trigger the Vape update notification
 		if currentCommit ~= "" and currentCommit ~= "main" then
@@ -87,7 +87,7 @@ local httpService = cloneref(game:GetService("HttpService"))
 local function downloadFile(path, func)
 	if not isfile(path) then
 		local suc, res = pcall(function()
-			return game:HttpGet('https://raw.githubusercontent.com/0lyzll/0lyzll/'..readfile('0lyzll/profiles/commit.txt')..'/'..select(1, path:gsub('0lyzll/', '')), true)
+			return game:HttpGet('https://raw.githubusercontent.com/0lyzll/DogVape/'..readfile('DogVape/profiles/commit.txt')..'/'..select(1, path:gsub('DogVape/', '')), true)
 		end)
 		if not suc or res == '404: Not Found' then
 			error(res)
@@ -103,7 +103,7 @@ end
 local function finishLoading()
 	vape.Init = nil
 	if not vape.Load then
-		warn('[0lyzll] vape.Load is nil skipping load')
+		warn('[DogVape] vape.Load is nil skipping load')
 		return
 	end
 	vape:Load()
@@ -115,17 +115,17 @@ local function finishLoading()
 		until vape.Loaded == nil
 	end))
 
-	-- Teleport Queue implementation adapted for 0lyzll
+	-- Teleport Queue implementation adapted for DogVape
 	local function buildTeleportScript()
 		if shared.VapeIndependent then return nil end
 
 		local teleportScript = [[
 			repeat task.wait() until game:IsLoaded()
 			shared.vapereload = true
-			if isfile and isfile("0lyzll/init.lua") then
-				loadstring(readfile("0lyzll/init.lua"), "init.lua")(_scriptconfig)
+			if isfile and isfile("DogVape/init.lua") then
+				loadstring(readfile("DogVape/init.lua"), "init.lua")(_scriptconfig)
 			else
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/0lyzll/0lyzll/main/init.lua"), "init.lua")(_scriptconfig)
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/0lyzll/DogVape/main/init.lua"), "init.lua")(_scriptconfig)
 			end
 		]]
 
@@ -170,16 +170,16 @@ local function finishLoading()
 	end)
 
 	if not shared.vapereload then
-		if getgenv()._0lyzllrole == 'HWID MISMATCH' then
-			vape:CreateNotification('0lyzll', 'HWID MISMATCH, Go to the script panel to reset hwid', 25, 'alert')
-			getgenv()._0lyzllrole = ''
+		if getgenv()._DogVaperole == 'HWID MISMATCH' then
+			vape:CreateNotification('DogVape', 'HWID MISMATCH, Go to the script panel to reset hwid', 25, 'alert')
+			getgenv()._DogVaperole = ''
 			task.wait(0.1)
 		end
 		if not shared.vapereload then
-			vape:CreateNotification('0lyzll', (getgenv()._0lyzllname and `Authenticated as {getgenv()._0lyzllname} with {getgenv()._0lyzllrole}, ` or '').. (vape.VapeButton and 'Press the button in the top right' or 'Press '..table.concat(vape.Keybind, ' + '):upper())..' to open GUI', 5)
+			vape:CreateNotification('DogVape', (getgenv()._DogVapename and `Authenticated as {getgenv()._DogVapename} with {getgenv()._DogVaperole}, ` or '').. (vape.VapeButton and 'Press the button in the top right' or 'Press '..table.concat(vape.Keybind, ' + '):upper())..' to open GUI', 5)
 			task.delay(0.05 + cloneref(game:GetService('RunService')).PostSimulation:Wait(), function()
 				if shared.updated then
-					vape:CreateNotification('0lyzll', `Script has updated from {shared.updated} to {readfile('0lyzll/profiles/commit.txt'):sub(1, 7)}`, 10, 'info')
+					vape:CreateNotification('DogVape', `Script has updated from {shared.updated} to {readfile('DogVape/profiles/commit.txt'):sub(1, 7)}`, 10, 'info')
 				end
 			end)
 		end
@@ -187,15 +187,15 @@ local function finishLoading()
 	end
 end
 
-if not isfile('0lyzll/profiles/gui.txt') then
-	writefile('0lyzll/profiles/gui.txt', 'new')
+if not isfile('DogVape/profiles/gui.txt') then
+	writefile('DogVape/profiles/gui.txt', 'new')
 end
-local gui = 'new'--readfile('0lyzll/profiles/gui.txt')
+local gui = 'new'--readfile('DogVape/profiles/gui.txt')
 
-if not isfolder('0lyzll/assets/'..gui) then
-	makefolder('0lyzll/assets/'..gui)
+if not isfolder('DogVape/assets/'..gui) then
+	makefolder('DogVape/assets/'..gui)
 end
-vape = loadstring(downloadFile('0lyzll/guis/'..gui..'.lua'), 'gui')(license)
+vape = loadstring(downloadFile('DogVape/guis/'..gui..'.lua'), 'gui')(license)
 shared.vape = vape
 shared.vapesmooth = true
 _G.vape = vape
@@ -217,23 +217,23 @@ if not shared.VapeIndependent then
 	if not game:IsLoaded() then
 		repeat task.wait() until game:IsLoaded()
 	end
-	loadstring(downloadFile('0lyzll/games/universal.lua'), 'universal')(license)
+	loadstring(downloadFile('DogVape/games/universal.lua'), 'universal')(license)
 	local scriptId = (game.PlaceId == 6872265039 and '6872265039') or (game.GameId == 2619619496 and '6872274481') or tostring(game.GameId)
-	if isfile('0lyzll/games/'..scriptId..'.lua') then
-		loadstring(readfile('0lyzll/games/'..scriptId..'.lua'), scriptId)(license)
+	if isfile('DogVape/games/'..scriptId..'.lua') then
+		loadstring(readfile('DogVape/games/'..scriptId..'.lua'), scriptId)(license)
 	else
 		if not shared.VapeDeveloper then
 			local suc, res = pcall(function()
-				return game:HttpGet('https://raw.githubusercontent.com/0lyzll/0lyzll/'..readfile('0lyzll/profiles/commit.txt')..'/games/'..scriptId..'.lua', true)
+				return game:HttpGet('https://raw.githubusercontent.com/0lyzll/DogVape/'..readfile('DogVape/profiles/commit.txt')..'/games/'..scriptId..'.lua', true)
 			end)
 			if suc and res ~= '404: Not Found' then
-				loadstring(downloadFile('0lyzll/games/'..scriptId..'.lua'), scriptId)(license)
+				loadstring(downloadFile('DogVape/games/'..scriptId..'.lua'), scriptId)(license)
 			end
 		end
 	end
-	loadstring(downloadFile('0lyzll/libraries/premium.lua'), 'premium')(license)
+	loadstring(downloadFile('DogVape/libraries/premium.lua'), 'premium')(license)
 	pcall(function()
-		local publib = loadstring(downloadFile('0lyzll/libraries/publicconfigs.lua'), 'publicconfigs')(license)
+		local publib = loadstring(downloadFile('DogVape/libraries/publicconfigs.lua'), 'publicconfigs')(license)
 		if publib and vape then
 			vape.Libraries = vape.Libraries or {}
 			vape.Libraries.publicconfigs = publib

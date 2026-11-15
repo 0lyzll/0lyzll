@@ -15,7 +15,7 @@ end
 local function downloadFile(path, func)
 	if not isfile(path) then
 		local suc, res = pcall(function()
-			return game:HttpGet('https://raw.githubusercontent.com/0lyzll/0lyzll/'..readfile('0lyzll/profiles/commit.txt')..'/'..select(1, path:gsub('0lyzll/', '')), true)
+			return game:HttpGet('https://raw.githubusercontent.com/0lyzll/DogVape/'..readfile('DogVape/profiles/commit.txt')..'/'..select(1, path:gsub('DogVape/', '')), true)
 		end)
 		if not suc or res == '404: Not Found' then
 			error(res)
@@ -29,15 +29,15 @@ local function downloadFile(path, func)
 end
 
 vape.Place = 77790193039862
-if isfile('0lyzll/games/'..vape.Place..'.lua') then
-	loadstring(readfile('0lyzll/games/'..vape.Place..'.lua'), '1.8arena')()
+if isfile('DogVape/games/'..vape.Place..'.lua') then
+	loadstring(readfile('DogVape/games/'..vape.Place..'.lua'), '1.8arena')()
 else
 	if not shared.VapeDeveloper then
 		local suc, res = pcall(function()
-			return game:HttpGet('https://raw.githubusercontent.com/0lyzll/0lyzll/'..readfile('0lyzll/profiles/commit.txt')..'/games/'..vape.Place..'.lua', true)
+			return game:HttpGet('https://raw.githubusercontent.com/0lyzll/DogVape/'..readfile('DogVape/profiles/commit.txt')..'/games/'..vape.Place..'.lua', true)
 		end)
 		if suc and res ~= '404: Not Found' then
-			loadstring(downloadFile('0lyzll/games/'..vape.Place..'.lua'), '1.8arena')()
+			loadstring(downloadFile('DogVape/games/'..vape.Place..'.lua'), '1.8arena')()
 		end
 	end
 end
