@@ -1,0 +1,10 @@
+# Client-side key validation (keep private to prevent bypass)
+libraries/keysystem.lua
+
+# Local profiles/keys
+DogVape/profiles/
+*.txt
+
+# Wrangler local dev
+.keys/
+wrangler.toml.local
