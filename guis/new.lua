@@ -2612,7 +2612,7 @@ function mainapi:CreateGUI()
 	logo.Position = UDim2.fromOffset(-16, 2)
 	logo.BackgroundTransparency = 1
 	logo.Image = getcustomasset('DogVape/assets/new/guivape.png')
-	logo.ImageColor3 = select(3, uipallet.Main:ToHSV()) > 0.5 and uipallet.Text or Color3.new(1, 1, 1)
+	logo.ImageColor3 = Color3.fromHSV(mainapi.GUIColor.Hue, mainapi.GUIColor.Sat, mainapi.GUIColor.Value)
 	logo.ScaleType = Enum.ScaleType.Fit
 	logo.Parent = window
 	local children = Instance.new('Frame')
@@ -8288,6 +8288,18 @@ function mainapi:UpdateGUI(hue, sat, val, default)
 		end
 	end
 
+	-- Update text GUI logo color
+	if textgui and textgui.Children then
+		local textLogo = textgui.Children:FindFirstChild('Logo')
+		if textLogo then
+			textLogo.ImageColor3 = rainbow and Color3.fromHSV(mainapi:Color(hue % 1)) or Color3.fromHSV(hue, sat, val)
+			local shadow = textLogo:FindFirstChild('Logo')
+			if shadow then
+				shadow.ImageColor3 = textLogo.ImageColor3
+			end
+		end
+	end
+
 	if not clickgui.Visible and not mainapi.Legit.Window.Visible and not (mainapi.PublicProfiles and mainapi.PublicProfiles.Window.Visible) then return end
 	local rainbow = mainapi.GUIColor.Rainbow and mainapi.RainbowMode.Value ~= 'Retro'
 
@@ -8333,6 +8345,17 @@ function mainapi:UpdateGUI(hue, sat, val, default)
 				v.Selected.Dots.Dots.ImageColor3 = v.Selected.Title.TextColor3
 				v.Selected.Bind.Icon.ImageColor3 = v.Selected.Title.TextColor3
 				v.Selected.Bind.TextLabel.TextColor3 = v.Selected.Title.TextColor3
+			end
+		end
+	end
+
+	-- Update main window logo color
+	if clickgui then
+		local mainWindow = clickgui:FindFirstChild('Window')
+		if mainWindow then
+			local mainLogo = mainWindow:FindFirstChild('VapeLogo')
+			if mainLogo then
+				mainLogo.ImageColor3 = rainbow and Color3.fromHSV(mainapi:Color(hue % 1)) or Color3.fromHSV(hue, sat, val)
 			end
 		end
 	end
