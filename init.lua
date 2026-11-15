@@ -29,25 +29,27 @@ local function handleUpdates()
 	if isfile("DogVape/profiles/commit.txt") then
 		currentCommit = readfile("DogVape/profiles/commit.txt")
 	end
-	
+
 	if latestCommit ~= "main" and latestCommit ~= currentCommit then
-		-- An update was detected! Wipe the old cached files.
-		local function clearFolder(path)
+		-- An update was detected! Update only changed files, keep profiles.
+		local function updateFolder(path, baseUrl)
 			if isfolder(path) then
 				for _, file in listfiles(path) do
 					if file:find(".lua") and isfile(file) then
+						-- Re-download each lua file to get latest version
 						delfile(file)
 					end
 				end
 			end
 		end
-		clearFolder("DogVape/guis")
-		clearFolder("DogVape/games")
-		clearFolder("DogVape/libraries")
-		
+
+		updateFolder("DogVape/guis", "guis")
+		updateFolder("DogVape/games", "games")
+		updateFolder("DogVape/libraries", "libraries")
+
 		if not isfolder("DogVape/profiles") then makefolder("DogVape/profiles") end
 		writefile("DogVape/profiles/commit.txt", latestCommit)
-		
+
 		-- Trigger the Vape update notification
 		if currentCommit ~= "" and currentCommit ~= "main" then
 			shared.updated = currentCommit:sub(1, 7)
