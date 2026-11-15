@@ -1,7 +1,7 @@
 --This watermark is used to delete the file if its cached, remove it to make the file persist after vape updates.
 local license = ... or {}
 if shared.vape then shared.vape:Uninject() end
-license.Key = license.Key or '_key'
+license.Key = license.Key or script_key or '_key'
 
 -- Enable auto-injection by default
 getgenv().AutoReinjectEnabled = true
@@ -184,6 +184,23 @@ local function finishLoading()
 			end)
 		end
 	
+	end
+end
+
+-- KEY SYSTEM ---------------------------------------------------------------
+do
+	local okLoad, mod = pcall(function()
+		return loadstring(downloadFile('DogVape/libraries/keysystem.lua'), 'keysystem')()
+	end)
+	if okLoad and type(mod) == 'table' and type(mod.run) == 'function' then
+		local key = mod.run(license.Key)
+		if not key then
+			warn('[DogVape] Key missing or invalid, aborting.')
+			return
+		end
+		license.Key = key
+	else
+		warn('[DogVape] Key system failed to load: '..tostring(mod))
 	end
 end
 
