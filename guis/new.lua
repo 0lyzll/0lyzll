@@ -6859,15 +6859,6 @@ createPublicProfilesWindow = function()
 	logo.Image = getcustomasset('DogVape/assets/new/guivape.png')
 	logo.Parent = window
 
-	local logov4 = Instance.new('ImageLabel')
-	logov4.Name = 'V4Logo'
-	logov4.Size = UDim2.fromOffset(240, 80)
-	logov4.Position = UDim2.fromOffset(15, -12)
-	logov4.BackgroundTransparency = 1
-	logov4.Image = getcustomasset('DogVape/assets/new/guiv4.png')
-	logov4.ImageColor3 = Color3.fromHSV(mainapi.GUIColor.Hue, mainapi.GUIColor.Sat, mainapi.GUIColor.Value)
-	logov4.Parent = logo
-
 	local titleLabel = Instance.new('TextLabel')
 	titleLabel.Name = 'Title'
 	titleLabel.Size = UDim2.new(1, -260, 0, 20)
@@ -7539,18 +7530,9 @@ local textguigradientv4
 local textguigradient = textgui:CreateToggle({
 	Name = 'Gradient',
 	Tooltip = 'Renders a gradient',
-	Function = function(callback)
-		textguigradientv4.Object.Visible = callback
-		mainapi:UpdateTextGUI()
-	end
-})
-textguigradientv4 = textgui:CreateToggle({
-	Name = 'V4 Gradient',
 	Function = function()
 		mainapi:UpdateTextGUI()
-	end,
-	Darker = true,
-	Visible = false
+	end
 })
 local textguianimations = textgui:CreateToggle({
 	Name = 'Animations',
@@ -7704,15 +7686,6 @@ mainapi:Clean(textgui.Children:GetPropertyChangedSignal('AbsolutePosition'):Conn
 	end
 end))
 
-local VapeLogoV4 = Instance.new('ImageLabel')
-VapeLogoV4.Name = 'Logo2'
-VapeLogoV4.Size = UDim2.fromOffset(33, 18)
-VapeLogoV4.Position = UDim2.new(1, 1, 0, 1)
-VapeLogoV4.BackgroundColor3 = Color3.new()
-VapeLogoV4.BackgroundTransparency = 1
-VapeLogoV4.BorderSizePixel = 0
-VapeLogoV4.Image = getcustomasset('DogVape/assets/new/textv4.png')
-VapeLogoV4.Parent = VapeLogo
 local VapeLogoShadow = VapeLogo:Clone()
 VapeLogoShadow.Position = UDim2.fromOffset(1, 1)
 VapeLogoShadow.ZIndex = 0
@@ -7720,15 +7693,9 @@ VapeLogoShadow.Visible = true
 VapeLogoShadow.ImageColor3 = Color3.new()
 VapeLogoShadow.ImageTransparency = 0.65
 VapeLogoShadow.Parent = VapeLogo
-VapeLogoShadow.Logo2.ZIndex = 0
-VapeLogoShadow.Logo2.ImageColor3 = Color3.new()
-VapeLogoShadow.Logo2.ImageTransparency = 0.65
 local VapeLogoGradient = Instance.new('UIGradient')
 VapeLogoGradient.Rotation = 90
 VapeLogoGradient.Parent = VapeLogo
-local VapeLogoGradient2 = Instance.new('UIGradient')
-VapeLogoGradient2.Rotation = 90
-VapeLogoGradient2.Parent = VapeLogoV4
 local VapeLabelCustom = Instance.new('TextLabel')
 VapeLabelCustom.Position = UDim2.fromOffset(5, 2)
 VapeLabelCustom.BackgroundTransparency = 1
@@ -8368,7 +8335,6 @@ function mainapi:UpdateGUI(hue, sat, val, default)
 
 	for i, v in mainapi.Categories do
 		if i == 'Main' then
-			v.Object.VapeLogo.V4Logo.ImageColor3 = Color3.fromHSV(hue, sat, val)
 			for _, button in v.Buttons do
 				if button.Enabled then
 					button.Object.TextColor3 = rainbow and Color3.fromHSV(mainapi:Color((hue - (button.Index * 0.025)) % 1)) or Color3.fromHSV(hue, sat, val)
